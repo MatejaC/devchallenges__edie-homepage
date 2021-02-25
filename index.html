@@ -4,33 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="scss/style.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
     <title>Edie homepage</title>
 </head>
 
 <body>
-    <div class="card">
-        <header class="card__header">
-            <p class="edie">Edie</p>
-            <nav class="menu-navigation" aria-label="Menu">
-                <a href="" class="menu-navigation__item">Home</a>
-                <a href="" class="menu-navigation__item">Services</a>
-                <a href="" class="menu-navigation__item">Our Works</a>
-                <a href="" class="menu-navigation__item">Clients</a>
-                <a href="" class="menu-navigation__item">Contact</a>
-            </nav>
-        </header>
-
-        <div class="card__home">
-            <p class="card__subtitle">Unhappy with your website?</p>
-            <p class="card__title">We create beautiful and fast web services</p>
-            <figure class="card__figure">
-                <img src="\devchallenges_edie-homepage\assets\heroImage.jpg">
-            </figure>
-
-
-        </div>
+    <header>
+        <nav>
+            <div class="navigation-menu" aria-label="Menu">
+                <div class="navigation-menu__content">
+                    <div class="logo">
+                        <p>Edie</p>
+                    </div>
+                    <div class="toggle">
+                        <a href="#" class="btn-toggle">☰</a>
+                    </div>
+                </div>
+                <ul class="toggle-nav">
+                    <li><a href="#" class="navigation-menu__item">Home</a></li>
+                    <li><a href="#" class="navigation-menu__item">Services</a></li>
+                    <li><a href="#" class="navigation-menu__item">Our Works</a></li>
+                    <li><a href="#" class="navigation-menu__item">Clients</a></li>
+                    <li><a href="#" class="navigation-menu__item">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="card__home">
+        <p class="card__subtitle">Unhappy with your website?</p>
+        <p class="card__title">We create beautiful and fast web services</p>
+        <figure class="card__figure">
+            <img src="assets/heroImage.jpg">
+        </figure>
     </div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
