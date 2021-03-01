@@ -1,219 +1,328 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Montserrat:wght@600&family=Poppins:wght@300;400;500;600;700&display=swap');
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://example.com/MaterialIcons-Regular.eot);
-    /* For IE6-8 */
-    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-}
-
-
-/*colors*/
-
-$background-color: #FFFFFF;
-$gray1: #333333;
-$gray2: #4F4F4F;
-$gray3: #828282;
-$gray4: #BDBDBD;
-$gray5bgButtonServices: #E0E0E0;
-$bgFooter: #100E1D;
-$gray6: #F2F2F2;
-$blue: #2D9CDB;
-$green: #27AE60;
-$red: #EB5757;
-
-/*fonts*/
-
-$Poppins: 'Poppins',
-sans-serif;
-$Heebo: 'Heebo',
-sans-serif;
-$Montserrat: 'Montserrat',
-sans-serif;
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 18px;
-    /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-}
-
-body,
-html {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 1442px;
-    padding: 2rem;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    background-color: $background-color;
-    margin-bottom: 6rem;
-}
-
-.logo {
-    display: flex;
-    margin-right: 5rem;
-    font-family: $Heebo;
-    font-weight: 800;
-    font-size: 2.25rem;
-    font-family: Heebo;
-    line-height: 53px;
-    letter-spacing: 0em;
-}
-
-
-/*navigation*/
-
-.open {
-    left: 0;
-}
-
-.navigation-menu {
-    display: flex;
-    flex-grow: 1;
-}
-
-.toggle-nav {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-    font-size: 24px;
-    font-family: $Poppins;
-    font-weight: 500;
-    line-height: 36px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-.toggle {
-    display: none;
-    a {
-        text-decoration: none;
-        color: $gray1;
-        display: block;
-        font-size: 24px;
+    @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Montserrat:wght@600&family=Poppins:wght@300;400;500;600;700&display=swap');
+    @font-face {
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://example.com/MaterialIcons-Regular.eot);
+        /* For IE6-8 */
+        src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
     }
-    @media (max-width: 767px) {
-        align-items: center;
+    /*colors*/
+    
+    $background-color: #FFFFFF;
+    $gray1: #333333;
+    $gray2: #4F4F4F;
+    $gray3: #828282;
+    $gray4: #BDBDBD;
+    $gray5bgButtonServices: #E0E0E0;
+    $bgFooter: #100E1D;
+    $gray6: #F2F2F2;
+    $blue: #2D9CDB;
+    $green: #27AE60;
+    $red: #EB5757;
+    /*fonts*/
+    
+    $Poppins: 'Poppins',
+    sans-serif;
+    $Heebo: 'Heebo',
+    sans-serif;
+    $Montserrat: 'Montserrat',
+    sans-serif;
+    .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 18px;
+        /* Preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+    }
+    
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video,
+    hr {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    
+    .clearfix {
+        zoom: 1;
+    }
+    
+    body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    html {
+        box-sizing: border-box;
+    }
+    
+    .container {
+        margin: 2rem auto;
+        max-width: 1200px;
+        padding: 1rem;
+    }
+    
+    header {
         display: flex;
-    }
-}
-
-.navigation-menu__content {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    &:last-child {
-        margin-right: 0;
-    }
-    @media (max-width: 767px) {
         align-items: center;
-        position: absolute;
-        flex-direction: column;
-        top: 0;
-        left: -250px;
-        transition: 0.3s;
         background-color: $background-color;
-        width: 250px;
-        height: 100%;
+        margin-bottom: 6rem;
     }
-}
-
-ul li {
-    color: $gray1;
-    font-family: $Poppins;
-    margin-left: 1.5rem;
-    @media (max-width: 767px) {
-        margin: 15px 10px;
+    
+    .logo {
+        display: flex;
+        margin-right: 30rem;
+        font-family: $Heebo;
+        font-weight: 800;
+        font-size: 2.25rem;
+        font-family: Heebo;
+        line-height: 53px;
+        letter-spacing: 0em;
     }
-    a {
-        text-decoration: none;
+    /*navigation*/
+    
+    .open {
+        left: 0;
+    }
+    
+    .navigation-menu {
+        display: flex;
+        flex-grow: 1;
+    }
+    
+    .toggle-nav {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        font-size: 24px;
+        font-family: $Poppins;
+        font-weight: 500;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    
+    .toggle {
+        display: none;
+        a {
+            text-decoration: none;
+            color: $gray1;
+            display: block;
+            font-size: 24px;
+        }
+        @media (max-width: 767px) {
+            align-items: center;
+            display: flex;
+        }
+    }
+    
+    .navigation-menu__content {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        &:last-child {
+            margin-right: 0;
+        }
+        @media (max-width: 767px) {
+            align-items: center;
+            position: absolute;
+            flex-direction: column;
+            top: 0;
+            left: -250px;
+            transition: 0.3s;
+            background-color: $background-color;
+            width: 250px;
+            height: 100%;
+        }
+    }
+    
+    ul li {
         color: $gray1;
+        font-family: $Poppins;
+        margin-left: 1.5rem;
+        @media (max-width: 767px) {
+            margin: 15px 10px;
+        }
+        a {
+            text-decoration: none;
+            color: $gray1;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
     }
-    &:last-child {
-        margin-right: 0;
+    /* --- end of navigation */
+    
+    .card-home__subtitle {
+        font-family: $Poppins;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        color: $blue;
+        margin-bottom: 1rem;
+        margin-left: 13rem;
     }
-}
-
-
-/* --- end of navigation */
-
-.creator__name {
-    color: $background-color;
-}
-
-.content-bg {
-    font-size: 18px;
-    width: 67px;
-    height: 67px;
-    background-color: $blue;
-    border-radius: 16px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
-}
-
-i.customUX {
-    font-size: 2.6em;
-    color: $background-color;
-    background-color: $blue;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 16px;
-    padding: 12px 12px;
-}
-
-i.customFrontEnd {
-    font-size: 2.2rem;
-    color: $background-color;
-    background-color: $green;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 16px;
-    padding: 13px 13.2px;
-}
-
-i.customBackEnd {
-    font-size: 2.3rem;
-    color: $background-color;
-    background-color: $red;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 16px;
-    padding: 13px 13px;
-}
-
-footer {
-    background-color: $bgFooter;
-}
+    
+    .card-home__title {
+        font-family: $Poppins;
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 4.5rem;
+        max-width: 543px;
+        margin-bottom: 2rem;
+        margin-left: 13rem;
+    }
+    
+    .card-home__image {
+        padding: 0;
+        flex: 1;
+        img {
+            width: 100%;
+        }
+    }
+    
+    i.customUX {
+        font-size: 2.6em;
+        color: $background-color;
+        background-color: $blue;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 16px;
+        padding: 12px 12px;
+    }
+    
+    i.customFrontEnd {
+        font-size: 2.2rem;
+        color: $background-color;
+        background-color: $green;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 16px;
+        padding: 13px 13.2px;
+    }
+    
+    i.customBackEnd {
+        font-size: 2.3rem;
+        color: $background-color;
+        background-color: $red;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 16px;
+        padding: 13px 13px;
+    }
+    
+    footer {
+        background-color: $bgFooter;
+    }
+    
+    .creator__name {
+        color: $background-color;
+    }
+    
+    .content-bg {
+        font-size: 18px;
+        width: 67px;
+        height: 67px;
+        background-color: $blue;
+        border-radius: 16px;
+    }

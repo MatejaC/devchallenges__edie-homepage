@@ -34,17 +34,110 @@
           font-feature-settings: 'liga';
 }
 
+html,
 body,
-html {
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .container {
-  max-width: 1442px;
-  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 1rem;
 }
 
 header {
@@ -62,7 +155,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 5rem;
+  margin-right: 30rem;
   font-family: "Heebo", sans-serif;
   font-weight: 800;
   font-size: 2.25rem;
@@ -192,20 +285,35 @@ ul li:last-child {
 }
 
 /* --- end of navigation */
-.creator__name {
-  color: #FFFFFF;
+.card-home__subtitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: #2D9CDB;
+  margin-bottom: 1rem;
+  margin-left: 13rem;
 }
 
-.content-bg {
-  font-size: 18px;
-  width: 67px;
-  height: 67px;
-  background-color: #2D9CDB;
-  border-radius: 16px;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  -ms-border-radius: 16px;
-  -o-border-radius: 16px;
+.card-home__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  max-width: 543px;
+  margin-bottom: 2rem;
+  margin-left: 13rem;
+}
+
+.card-home__image {
+  padding: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.card-home__image img {
+  width: 100%;
 }
 
 i.customUX {
@@ -240,5 +348,17 @@ i.customBackEnd {
 
 footer {
   background-color: #100E1D;
+}
+
+.creator__name {
+  color: #FFFFFF;
+}
+
+.content-bg {
+  font-size: 18px;
+  width: 67px;
+  height: 67px;
+  background-color: #2D9CDB;
+  border-radius: 16px;
 }
 /*# sourceMappingURL=style.css.map */
