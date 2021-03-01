@@ -299,6 +299,7 @@ ul li:last-child {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 3rem;
+  color: #333333;
   line-height: 4.5rem;
   max-width: 543px;
   margin-bottom: 2rem;
@@ -314,6 +315,82 @@ ul li:last-child {
 
 .card-home__image img {
   width: 100%;
+}
+
+.card-purpose__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #333333;
+  line-height: 4.5rem;
+  font-family: "Poppins", sans-serif;
+  max-width: 370px;
+  margin-top: 2.5rem;
+  margin-left: 13rem;
+  margin-bottom: 2.5rem;
+}
+
+.card-purpose__description {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.9rem;
+  color: #4F4F4F;
+  font-weight: 400;
+  margin-left: 13rem;
+  max-width: 450px;
+  margin-bottom: 2.5rem;
+}
+
+.card-purpose__question {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.3rem;
+  color: #828282;
+  margin-left: 13rem;
+  margin-top: 2.6rem;
+  margin-bottom: 0.56rem;
+}
+
+.card-purpose__email-join1 {
+  display: inline-block;
+  width: 350px;
+  height: 57px;
+  background: #F2F2F2;
+  border-radius: 12px;
+  margin-left: 12.8rem;
+  margin-bottom: 12rem;
+}
+
+.card-purpose__email-join1--input {
+  border: none;
+  width: 350px;
+  height: 57px;
+  background-color: #F2F2F2;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.7rem;
+  letter-spacing: 0em;
+  color: #BDBDBD;
+  padding-left: 1.31rem;
+}
+
+.card-purpose__email-join1--submit {
+  margin-left: -34%;
+  border: none;
+  width: 94px;
+  height: 49px;
+  background-color: #2D9CDB;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.7rem;
+  color: #F2F2F2;
 }
 
 i.customUX {
