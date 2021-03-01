@@ -1,10 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Montserrat:wght@600&family=Poppins:wght@300;400;500;600;700&display=swap');
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -18,6 +12,16 @@
 /*colors*/
 
 $background-color: #FFFFFF;
+$gray1: #333333;
+$gray2: #4F4F4F;
+$gray3: #828282;
+$gray4: #BDBDBD;
+$gray5bgButtonServices: #E0E0E0;
+$bgFooter: #100E1D;
+$gray6: #F2F2F2;
+$blue: #2D9CDB;
+$green: #27AE60;
+$red: #EB5757;
 
 /*fonts*/
 
@@ -50,33 +54,67 @@ sans-serif;
     font-feature-settings: 'liga';
 }
 
-.open {
-    left: 0;
+body,
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-nav {
+.container {
+    max-width: 1442px;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
     background-color: $background-color;
+    margin-bottom: 6rem;
 }
 
 .logo {
     display: flex;
+    margin-right: 5rem;
+    font-family: $Heebo;
+    font-weight: 800;
+    font-size: 2.25rem;
+    font-family: Heebo;
+    line-height: 53px;
+    letter-spacing: 0em;
+}
+
+
+/*navigation*/
+
+.open {
+    left: 0;
 }
 
 .navigation-menu {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 15px 15px;
     display: flex;
-    align-items: center;
+    flex-grow: 1;
+}
+
+.toggle-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    font-size: 24px;
+    font-family: $Poppins;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
 }
 
 .toggle {
     display: none;
     a {
         text-decoration: none;
-        color: black;
+        color: $gray1;
         display: block;
-        font-size: 25px;
+        font-size: 24px;
     }
     @media (max-width: 767px) {
         align-items: center;
@@ -85,19 +123,19 @@ nav {
 }
 
 .navigation-menu__content {
-    width: 100%;
     position: relative;
     display: flex;
-    margin: 0 auto;
-    align-items: center;
     justify-content: space-between;
 }
 
 ul {
     list-style-type: none;
-    padding: 0;
+    margin: 0 auto;
     display: flex;
     align-items: center;
+    &:last-child {
+        margin-right: 0;
+    }
     @media (max-width: 767px) {
         align-items: center;
         position: absolute;
@@ -112,21 +150,23 @@ ul {
 }
 
 ul li {
-    margin: 0 10px;
-    color: gray;
+    color: $gray1;
     font-family: $Poppins;
+    margin-left: 1.5rem;
     @media (max-width: 767px) {
         margin: 15px 10px;
     }
     a {
         text-decoration: none;
-        color: gray;
+        color: $gray1;
+    }
+    &:last-child {
+        margin-right: 0;
     }
 }
 
-footer {
-    background-color: black;
-}
+
+/* --- end of navigation */
 
 .creator__name {
     color: $background-color;
@@ -136,7 +176,7 @@ footer {
     font-size: 18px;
     width: 67px;
     height: 67px;
-    background-color: #2D9CDB;
+    background-color: $blue;
     border-radius: 16px;
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
@@ -146,8 +186,8 @@ footer {
 
 i.customUX {
     font-size: 2.6em;
-    color: white;
-    background-color: #2D9CDB;
+    color: $background-color;
+    background-color: $blue;
     width: 4rem;
     height: 4rem;
     border-radius: 16px;
@@ -156,8 +196,8 @@ i.customUX {
 
 i.customFrontEnd {
     font-size: 2.2rem;
-    color: white;
-    background-color: #27AE60;
+    color: $background-color;
+    background-color: $green;
     width: 4rem;
     height: 4rem;
     border-radius: 16px;
@@ -166,10 +206,14 @@ i.customFrontEnd {
 
 i.customBackEnd {
     font-size: 2.3rem;
-    color: white;
-    background-color: #EB5757;
+    color: $background-color;
+    background-color: $red;
     width: 4rem;
     height: 4rem;
     border-radius: 16px;
     padding: 13px 13px;
+}
+
+footer {
+    background-color: $bgFooter;
 }
