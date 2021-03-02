@@ -1,437 +1,555 @@
- @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Montserrat:wght@600&family=Poppins:wght@300;400;500;600;700&display=swap');
- @font-face {
-     font-family: 'Material Icons';
-     font-style: normal;
-     font-weight: 400;
-     src: url(https://example.com/MaterialIcons-Regular.eot);
-     /* For IE6-8 */
-     src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
- }
- /*colors*/
- 
- $background-color: #FFFFFF;
- $gray1: #333333;
- $gray2: #4F4F4F;
- $gray3: #828282;
- $gray4: #BDBDBD;
- $gray5bgButtonServices: #E0E0E0;
- $bgFooter: #100E1D;
- $gray6: #F2F2F2;
- $blue: #2D9CDB;
- $blueHover: #2d9bdbd8;
- $green: #27AE60;
- $red: #EB5757;
- /*fonts*/
- 
- $Poppins: 'Poppins',
- sans-serif;
- $Heebo: 'Heebo',
- sans-serif;
- $Montserrat: 'Montserrat',
- sans-serif;
- .material-icons {
-     font-family: 'Material Icons';
-     font-weight: normal;
-     font-style: normal;
-     font-size: 18px;
-     /* Preferred icon size */
-     display: inline-block;
-     line-height: 1;
-     text-transform: none;
-     letter-spacing: normal;
-     word-wrap: normal;
-     white-space: nowrap;
-     direction: ltr;
-     /* Support for all WebKit browsers. */
-     -webkit-font-smoothing: antialiased;
-     /* Support for Safari and Chrome. */
-     text-rendering: optimizeLegibility;
-     /* Support for Firefox. */
-     -moz-osx-font-smoothing: grayscale;
-     /* Support for IE. */
-     font-feature-settings: 'liga';
- }
- 
- html,
- body,
- div,
- span,
- applet,
- object,
- iframe,
- h1,
- h2,
- h3,
- h4,
- h5,
- h6,
- p,
- blockquote,
- pre,
- a,
- abbr,
- acronym,
- address,
- big,
- cite,
- code,
- del,
- dfn,
- em,
- img,
- ins,
- kbd,
- q,
- s,
- samp,
- small,
- strike,
- strong,
- sub,
- sup,
- tt,
- var,
- b,
- u,
- i,
- center,
- dl,
- dt,
- dd,
- fieldset,
- form,
- label,
- legend,
- table,
- caption,
- tbody,
- tfoot,
- thead,
- tr,
- th,
- td,
- article,
- aside,
- canvas,
- details,
- embed,
- figure,
- figcaption,
- footer,
- header,
- hgroup,
- menu,
- nav,
- output,
- ruby,
- section,
- summary,
- time,
- mark,
- audio,
- video,
- hr {
-     margin: 0;
-     padding: 0;
-     border: 0;
- }
- 
- .clearfix {
-     zoom: 1;
- }
- 
- body {
-     box-sizing: border-box;
-     margin: 0;
-     padding: 0;
- }
- 
- html {
-     box-sizing: border-box;
- }
- 
- .container {
-     margin: 2rem auto;
-     max-width: 1200px;
-     padding: 1rem;
- }
- 
- header {
-     display: flex;
-     align-items: center;
-     background-color: $background-color;
-     margin-bottom: 6rem;
- }
- 
- .logo {
-     display: flex;
-     margin-right: 30rem;
-     font-family: $Heebo;
-     font-weight: 800;
-     font-size: 2.25rem;
-     font-family: Heebo;
-     line-height: 53px;
-     letter-spacing: 0em;
- }
- /*navigation*/
- 
- .open {
-     left: 0;
- }
- 
- .navigation-menu {
-     display: flex;
-     flex-grow: 1;
- }
- 
- .toggle-nav {
-     display: flex;
-     justify-content: space-between;
-     flex-grow: 1;
-     font-size: 24px;
-     font-family: $Poppins;
-     font-weight: 500;
-     line-height: 36px;
-     letter-spacing: 0em;
-     text-align: left;
- }
- 
- .toggle {
-     display: none;
-     a {
-         text-decoration: none;
-         color: $gray1;
-         display: block;
-         font-size: 24px;
-     }
-     @media (max-width: 767px) {
-         align-items: center;
-         display: flex;
-     }
- }
- 
- .navigation-menu__content {
-     position: relative;
-     display: flex;
-     justify-content: space-between;
- }
- 
- ul {
-     list-style-type: none;
-     margin: 0 auto;
-     display: flex;
-     align-items: center;
-     &:last-child {
-         margin-right: 0;
-     }
-     @media (max-width: 767px) {
-         align-items: center;
-         position: absolute;
-         flex-direction: column;
-         top: 0;
-         left: -250px;
-         transition: 0.3s;
-         background-color: $background-color;
-         width: 250px;
-         height: 100%;
-     }
- }
- 
- ul li {
-     color: $gray1;
-     font-family: $Poppins;
-     margin-left: 1.5rem;
-     @media (max-width: 767px) {
-         margin: 15px 10px;
-     }
-     a {
-         text-decoration: none;
-         color: $gray1;
-     }
-     &:last-child {
-         margin-right: 0;
-     }
- }
- /* --- end of navigation */
- 
- .card-home__subtitle {
-     font-family: $Poppins;
-     font-weight: 500;
-     font-size: 1rem;
-     line-height: 1.6rem;
-     color: $blue;
-     margin-bottom: 1rem;
-     margin-left: 13rem;
- }
- 
- .card-home__title {
-     font-family: $Poppins;
-     font-weight: 500;
-     font-size: 3rem;
-     color: $gray1;
-     line-height: 4.5rem;
-     max-width: 543px;
-     margin-bottom: 2rem;
-     margin-left: 13rem;
- }
- 
- .card-home__image {
-     padding: 0;
-     flex: 1;
-     img {
-         width: 100%;
-     }
- }
- 
- .card-purpose__title {
-     font-family: $Poppins;
-     font-weight: 500;
-     font-size: 3rem;
-     color: $gray1;
-     line-height: 4.5rem;
-     font-family: $Poppins;
-     max-width: 370px;
-     margin-top: 2.5rem;
-     margin-left: 13rem;
-     margin-bottom: 2.5rem;
- }
- 
- .card-purpose__description {
-     font-family: $Poppins;
-     font-size: 1.125rem;
-     line-height: 1.9rem;
-     color: $gray2;
-     font-weight: 400;
-     margin-left: 13rem;
-     max-width: 450px;
-     margin-bottom: 2.5rem;
- }
- 
- .card-purpose__question {
-     font-family: $Poppins;
-     font-weight: 500;
-     font-size: 0.875rem;
-     line-height: 1.3rem;
-     color: $gray3;
-     margin-left: 13rem;
-     margin-top: 2.6rem;
-     margin-bottom: 0.56rem;
- }
- 
- .card-purpose__email-join1 {
-     display: inline-block;
-     width: 350px;
-     height: 57px;
-     background: $gray6;
-     border-radius: 12px;
-     margin-left: 12.8rem;
-     margin-bottom: 12rem;
- }
- 
- .card-purpose__email-join1--input {
-     border: none;
-     width: 350px;
-     height: 57px;
-     background-color: $gray6;
-     border-radius: 12px;
-     font-family: $Poppins;
-     font-size: 1.125rem;
-     font-style: normal;
-     font-weight: 500;
-     line-height: 1.7rem;
-     letter-spacing: 0em;
-     color: $gray4;
-     padding-left: 1.31rem;
- }
- 
- .card-purpose__email-join1--submit {
-     margin-left: -34%;
-     border: none;
-     width: 94px;
-     height: 49px;
-     background-color: $blue;
-     border-radius: 12px;
-     font-family: $Poppins;
-     font-size: 1.125rem;
-     font-style: normal;
-     font-weight: 500;
-     line-height: 1.7rem;
-     color: $gray6;
-     cursor: pointer;
-     z-index: 2;
-     &:hover {
-         background-color: $blueHover;
-     }
-     &:active,
-     &::selection,
-     &:focus,
-     &:visited {
-         outline: none;
-     }
- }
- 
- .card-services__title {
-     font-family: $Poppins;
-     font-style: normal;
-     font-weight: 500;
-     font-size: 2.25rem;
-     line-height: 3.38rem;
-     color: $gray1;
-     margin-left: 5rem;
-     max-width: 346px;
-     margin-bottom: 2.6rem;
- }
- 
- .card-services-boxes {
-     display: flex;
- }
- 
- .card-services-boxes>div {
-     flex: 1 1 0%;
- }
- 
- i.customUX {
-     font-size: 2.6em;
-     color: $background-color;
-     background-color: $blue;
-     width: 4rem;
-     height: 4rem;
-     border-radius: 16px;
-     padding: 12px 12px;
- }
- 
- i.customFrontEnd {
-     font-size: 2.2rem;
-     color: $background-color;
-     background-color: $green;
-     width: 4rem;
-     height: 4rem;
-     border-radius: 16px;
-     padding: 13px 13.2px;
- }
- 
- i.customBackEnd {
-     font-size: 2.3rem;
-     color: $background-color;
-     background-color: $red;
-     width: 4rem;
-     height: 4rem;
-     border-radius: 16px;
-     padding: 13px 13px;
- }
- 
- footer {
-     background-color: $bgFooter;
- }
- 
- .creator__name {
-     color: $background-color;
- }
- 
- .content-bg {
-     font-size: 18px;
-     width: 67px;
-     height: 67px;
-     background-color: $blue;
-     border-radius: 16px;
- }
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Montserrat:wght@600&family=Poppins:wght@300;400;500;600;700&display=swap');
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot);
+    /* For IE6-8 */
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+
+/*colors*/
+
+$background-color: #FFFFFF;
+$gray1: #333333;
+$gray2: #4F4F4F;
+$gray3: #828282;
+$gray4: #BDBDBD;
+$gray5bgButtonServices: #E0E0E0;
+$bgFooter: #100E1D;
+$gray6: #F2F2F2;
+$blue: #2D9CDB;
+$blueHover: #2d9bdbd8;
+$green: #27AE60;
+$red: #EB5757;
+
+/*fonts*/
+
+$Poppins: 'Poppins',
+sans-serif;
+$Heebo: 'Heebo',
+sans-serif;
+$Montserrat: 'Montserrat',
+sans-serif;
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: $background-color;
+    margin-bottom: 6rem;
+}
+
+.logo {
+    display: flex;
+    margin-right: 30rem;
+    font-family: $Heebo;
+    font-weight: 800;
+    font-size: 2.25rem;
+    font-family: Heebo;
+    line-height: 53px;
+    letter-spacing: 0em;
+}
+
+
+/*navigation*/
+
+.open {
+    left: 0;
+}
+
+.navigation-menu {
+    display: flex;
+    flex-grow: 1;
+}
+
+.toggle-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    font-size: 24px;
+    font-family: $Poppins;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.toggle {
+    display: none;
+    a {
+        text-decoration: none;
+        color: $gray1;
+        display: block;
+        font-size: 24px;
+    }
+    @media (max-width: 767px) {
+        align-items: center;
+        display: flex;
+    }
+}
+
+.navigation-menu__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    &:last-child {
+        margin-right: 0;
+    }
+    @media (max-width: 767px) {
+        align-items: center;
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        left: -250px;
+        transition: 0.3s;
+        background-color: $background-color;
+        width: 250px;
+        height: 100%;
+    }
+}
+
+ul li {
+    color: $gray1;
+    font-family: $Poppins;
+    margin-left: 1.5rem;
+    @media (max-width: 767px) {
+        margin: 15px 10px;
+    }
+    a {
+        text-decoration: none;
+        color: $gray1;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+
+/* --- end of navigation */
+
+.card-home__subtitle {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: $blue;
+    margin-bottom: 1rem;
+    margin-left: 13rem;
+}
+
+.card-home__title {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 3rem;
+    color: $gray1;
+    line-height: 4.5rem;
+    max-width: 543px;
+    margin-bottom: 2rem;
+    margin-left: 13rem;
+}
+
+.card-home__image {
+    padding: 0;
+    flex: 1;
+    img {
+        width: 100%;
+    }
+}
+
+.card-purpose__title {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 3rem;
+    color: $gray1;
+    line-height: 4.5rem;
+    font-family: $Poppins;
+    max-width: 370px;
+    margin-top: 2.5rem;
+    margin-left: 13rem;
+    margin-bottom: 2.5rem;
+}
+
+.card-purpose__description {
+    font-family: $Poppins;
+    font-size: 1.125rem;
+    line-height: 1.9rem;
+    color: $gray2;
+    font-weight: 400;
+    margin-left: 13rem;
+    max-width: 450px;
+    margin-bottom: 2.5rem;
+}
+
+.card-purpose__question {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.3rem;
+    color: $gray3;
+    margin-left: 13rem;
+    margin-top: 2.6rem;
+    margin-bottom: 0.56rem;
+}
+
+.card-purpose__email-join1 {
+    display: inline-block;
+    width: 350px;
+    height: 57px;
+    background: $gray6;
+    border-radius: 12px;
+    margin-left: 12.8rem;
+    margin-bottom: 12rem;
+}
+
+.card-purpose__email-join1--input {
+    border: none;
+    width: 350px;
+    height: 57px;
+    background-color: $gray6;
+    border-radius: 12px;
+    font-family: $Poppins;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.7rem;
+    letter-spacing: 0em;
+    color: $gray4;
+    padding-left: 1.31rem;
+}
+
+.card-purpose__email-join1--submit {
+    margin-left: -34%;
+    border: none;
+    width: 94px;
+    height: 49px;
+    background-color: $blue;
+    border-radius: 12px;
+    font-family: $Poppins;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.7rem;
+    color: $gray6;
+    cursor: pointer;
+    z-index: 2;
+    &:hover {
+        background-color: $blueHover;
+    }
+    &:active,
+    &::selection,
+    &:focus,
+    &:visited {
+        outline: none;
+    }
+}
+
+.card-services {
+    margin-bottom: 12rem;
+}
+
+.card-services__title {
+    font-family: $Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 3.38rem;
+    color: $gray1;
+    margin-left: 5rem;
+    max-width: 346px;
+    margin-bottom: 2.6rem;
+}
+
+.card-services-boxes {
+    display: flex;
+    margin-left: 5rem;
+}
+
+.card-services-boxes>div {
+    flex: 1 1 auto;
+}
+
+.card-UX,
+.card-BackEnd {
+    &__title {
+        font-family: $Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        color: &$gray1;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    &__description {
+        max-width: 250px;
+        font-family: &oppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $gray2;
+    }
+    &__button {
+        width: 116px;
+        height: 42px;
+        background-color: $gray5bgButtonServices;
+        border-radius: 12px;
+        border: none;
+        margin: 2.4rem 0 2.8rem -.15rem;
+        font-family: &Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        cursor: pointer;
+        color: $gray3;
+        &:hover {
+            background-color: $gray4;
+        }
+    }
+}
+
+i.card-UX__customUX {
+    font-size: 2.6rem;
+    color: $background-color;
+    background-color: $blue;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 16px;
+    padding: 16px 0px 0px 20px;
+    margin-top: 2.7rem;
+}
+
+i.card-FrontEnd__customFrontEnd {
+    font-size: 2.7rem;
+    color: $background-color;
+    background-color: $green;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 16px;
+    padding: 20px 0px 0px 21px;
+    margin-left: 2rem;
+    margin-top: 2.7rem;
+}
+
+i.card-BackEnd__customBackEnd {
+    font-size: 2.8rem;
+    color: $background-color;
+    background-color: $red;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 16px;
+    padding: 15px 0px 0px 19px;
+    margin-left: 4.9rem;
+    margin-top: 2.7rem;
+}
+
+.card-FrontEnd {
+    &__title {
+        font-family: $Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        color: &$gray1;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        margin-left: 2rem;
+    }
+    &__description {
+        max-width: 250px;
+        font-family: &oppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $gray2;
+        margin-left: 2rem;
+    }
+    &__button {
+        width: 116px;
+        height: 42px;
+        background-color: $gray5bgButtonServices;
+        border-radius: 12px;
+        border: none;
+        margin: 2.4rem 0 2.8rem 1.8rem;
+        font-family: &Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        cursor: pointer;
+        color: $gray3;
+        &:hover {
+            background-color: $gray4;
+        }
+    }
+    background: $background-color;
+    box-shadow: 0px 10px 30px rgba(51,
+    51,
+    51,
+    0.1);
+    border-radius: 24px;
+    max-width: 341px;
+    cursor: pointer;
+}
+
+.card-BackEnd {
+    &__title,
+    &__description {
+        margin-left: 5rem;
+    }
+    &__button {
+        margin-left: 4.8rem;
+    }
+}
+
+footer {
+    background-color: $bgFooter;
+}
+
+.creator__name {
+    color: $background-color;
+}
+
+.content-bg {
+    font-size: 18px;
+    width: 67px;
+    height: 67px;
+    background-color: $blue;
+    border-radius: 16px;
+}

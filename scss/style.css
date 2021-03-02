@@ -407,6 +407,10 @@ ul li:last-child {
   outline: none;
 }
 
+.card-services {
+  margin-bottom: 12rem;
+}
+
 .card-services__title {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -423,42 +427,153 @@ ul li:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 5rem;
 }
 
 .card-services-boxes > div {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
-i.customUX {
-  font-size: 2.6em;
+.card-UX__title,
+.card-BackEnd__title {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: .card-UX__title, .card-BackEnd__title #333333;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-UX__description,
+.card-BackEnd__description {
+  max-width: 250px;
+  font-family: .card-UX__description, .card-BackEnd__description oppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #4F4F4F;
+}
+
+.card-UX__button,
+.card-BackEnd__button {
+  width: 116px;
+  height: 42px;
+  background-color: #E0E0E0;
+  border-radius: 12px;
+  border: none;
+  margin: 2.4rem 0 2.8rem -.15rem;
+  font-family: .card-UX__button, .card-BackEnd__button Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+  color: #828282;
+}
+
+.card-UX__button:hover,
+.card-BackEnd__button:hover {
+  background-color: #BDBDBD;
+}
+
+i.card-UX__customUX {
+  font-size: 2.6rem;
   color: #FFFFFF;
   background-color: #2D9CDB;
   width: 4rem;
   height: 4rem;
   border-radius: 16px;
-  padding: 12px 12px;
+  padding: 16px 0px 0px 20px;
+  margin-top: 2.7rem;
 }
 
-i.customFrontEnd {
-  font-size: 2.2rem;
+i.card-FrontEnd__customFrontEnd {
+  font-size: 2.7rem;
   color: #FFFFFF;
   background-color: #27AE60;
   width: 4rem;
   height: 4rem;
   border-radius: 16px;
-  padding: 13px 13.2px;
+  padding: 20px 0px 0px 21px;
+  margin-left: 2rem;
+  margin-top: 2.7rem;
 }
 
-i.customBackEnd {
-  font-size: 2.3rem;
+i.card-BackEnd__customBackEnd {
+  font-size: 2.8rem;
   color: #FFFFFF;
   background-color: #EB5757;
   width: 4rem;
   height: 4rem;
   border-radius: 16px;
-  padding: 13px 13px;
+  padding: 15px 0px 0px 19px;
+  margin-left: 4.9rem;
+  margin-top: 2.7rem;
+}
+
+.card-FrontEnd {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+          box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+  border-radius: 24px;
+  max-width: 341px;
+  cursor: pointer;
+}
+
+.card-FrontEnd__title {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: .card-FrontEnd__title #333333;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  margin-left: 2rem;
+}
+
+.card-FrontEnd__description {
+  max-width: 250px;
+  font-family: .card-FrontEnd__description oppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #4F4F4F;
+  margin-left: 2rem;
+}
+
+.card-FrontEnd__button {
+  width: 116px;
+  height: 42px;
+  background-color: #E0E0E0;
+  border-radius: 12px;
+  border: none;
+  margin: 2.4rem 0 2.8rem 1.8rem;
+  font-family: .card-FrontEnd__button Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+  color: #828282;
+}
+
+.card-FrontEnd__button:hover {
+  background-color: #BDBDBD;
+}
+
+.card-BackEnd__title, .card-BackEnd__description {
+  margin-left: 5rem;
+}
+
+.card-BackEnd__button {
+  margin-left: 4.8rem;
 }
 
 footer {
