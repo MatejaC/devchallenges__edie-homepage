@@ -708,8 +708,99 @@ footer {
   -o-transform: translateX(10px);
 }
 
-.creator__name {
-  color: #FFFFFF;
+.team {
+  display: -ms-grid;
+  display: grid;
+}
+
+.team__pre-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.7rem;
+  color: #EB5757;
+  margin-bottom: .5rem;
+}
+
+.team__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 3.4rem;
+  color: #333333;
+  max-width: 280px;
+  margin-bottom: 0.875rem;
+}
+
+.team__about {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 24px;
+  color: #4F4F4F;
+  max-width: 270px;
+}
+
+.comment__line {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 3.375rem;
+  color: #333333;
+  max-width: 937px;
+}
+
+.team-photos img {
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+}
+
+.comment__persona-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.comment__persona-wrap2 > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.comment__persona-img {
+  width: 7%;
+  border-radius: 24px;
+}
+
+.comment__persona-img img {
+  width: 100%;
+}
+
+.comment__persona-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: #333333;
+}
+
+.comment__persona-firm {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.67rem;
+  color: #828282;
 }
 
 .content-bg {
@@ -718,5 +809,9 @@ footer {
   height: 67px;
   background-color: #2D9CDB;
   border-radius: 16px;
+}
+
+.creator__name {
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=style.css.map */

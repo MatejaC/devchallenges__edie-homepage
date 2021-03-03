@@ -655,8 +655,89 @@ footer {
     }
 }
 
-.creator__name {
-    color: $background-color;
+.team {
+    display: grid;
+}
+
+.team__pre-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+    color: $red;
+    margin-bottom: .5rem;
+}
+
+.team__title {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 3.4rem;
+    color: $gray1;
+    max-width: 280px;
+    margin-bottom: 0.875rem;
+}
+
+.team__about {
+    font-family: $Poppins;
+    font-size: 1rem;
+    line-height: 24px;
+    color: $gray2;
+    max-width: 270px;
+}
+
+.comment__line {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 3.375rem;
+    color: $gray1;
+    max-width: 937px;
+}
+
+.team-photos img {
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+}
+
+.comment__persona-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comment__persona-wrap2>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment__persona-img {
+    width: 7%;
+    border-radius: 24px;
+}
+
+.comment__persona-img img {
+    width: 100%;
+}
+
+.comment__persona-name {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: $gray1;
+}
+
+.comment__persona-firm {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.67rem;
+    color: $gray3;
 }
 
 .content-bg {
@@ -665,4 +746,8 @@ footer {
     height: 67px;
     background-color: $blue;
     border-radius: 16px;
+}
+
+.creator__name {
+    color: $background-color;
 }
