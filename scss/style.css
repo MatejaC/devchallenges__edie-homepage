@@ -427,13 +427,24 @@ ul li:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 5rem;
+  margin-left: 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .card-services-boxes > div {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-UX,
+.card-BackEnd {
+  max-width: 341px;
 }
 
 .card-UX__title,
@@ -481,6 +492,16 @@ ul li:last-child {
   background-color: #BDBDBD;
 }
 
+.card-UX:hover,
+.card-BackEnd:hover {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+          box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+  border-radius: 24px;
+  max-width: 341px;
+  cursor: pointer;
+}
+
 i.card-UX__customUX {
   font-size: 2.6rem;
   color: #FFFFFF;
@@ -490,6 +511,7 @@ i.card-UX__customUX {
   border-radius: 16px;
   padding: 16px 0px 0px 20px;
   margin-top: 2.7rem;
+  margin-left: 2rem;
 }
 
 i.card-FrontEnd__customFrontEnd {
@@ -512,7 +534,7 @@ i.card-BackEnd__customBackEnd {
   height: 4rem;
   border-radius: 16px;
   padding: 15px 0px 0px 19px;
-  margin-left: 4.9rem;
+  margin-left: 2rem;
   margin-top: 2.7rem;
 }
 
@@ -569,11 +591,19 @@ i.card-BackEnd__customBackEnd {
 }
 
 .card-BackEnd__title, .card-BackEnd__description {
-  margin-left: 5rem;
+  margin-left: 2rem;
 }
 
 .card-BackEnd__button {
-  margin-left: 4.8rem;
+  margin-left: 1.8rem;
+}
+
+.card-UX__title, .card-UX__description {
+  margin-left: 2rem;
+}
+
+.card-UX__button {
+  margin-left: 1.8rem;
 }
 
 footer {

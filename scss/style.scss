@@ -395,15 +395,18 @@ ul li {
 
 .card-services-boxes {
     display: flex;
-    margin-left: 5rem;
+    margin-left: 3rem;
+    justify-content: space-between;
 }
 
 .card-services-boxes>div {
     flex: 1 1 auto;
+    justify-content: space-between;
 }
 
 .card-UX,
 .card-BackEnd {
+    max-width: 341px;
     &__title {
         font-family: $Poppins;
         font-style: normal;
@@ -441,6 +444,13 @@ ul li {
             background-color: $gray4;
         }
     }
+    &:hover {
+        background: $background-color;
+        box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+        border-radius: 24px;
+        max-width: 341px;
+        cursor: pointer;
+    }
 }
 
 i.card-UX__customUX {
@@ -452,6 +462,7 @@ i.card-UX__customUX {
     border-radius: 16px;
     padding: 16px 0px 0px 20px;
     margin-top: 2.7rem;
+    margin-left: 2rem;
 }
 
 i.card-FrontEnd__customFrontEnd {
@@ -474,7 +485,7 @@ i.card-BackEnd__customBackEnd {
     height: 4rem;
     border-radius: 16px;
     padding: 15px 0px 0px 19px;
-    margin-left: 4.9rem;
+    margin-left: 2rem;
     margin-top: 2.7rem;
 }
 
@@ -531,10 +542,20 @@ i.card-BackEnd__customBackEnd {
 .card-BackEnd {
     &__title,
     &__description {
-        margin-left: 5rem;
+        margin-left: 2rem;
     }
     &__button {
-        margin-left: 4.8rem;
+        margin-left: 1.8rem;
+    }
+}
+
+.card-UX {
+    &__title,
+    &__description {
+        margin-left: 2rem;
+    }
+    &__button {
+        margin-left: 1.8rem;
     }
 }
 
