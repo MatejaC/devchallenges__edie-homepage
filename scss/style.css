@@ -610,6 +610,44 @@ footer {
   background-color: #100E1D;
 }
 
+.card-OurWorks__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 3.375rem;
+  color: #333333;
+  max-width: 448px;
+  margin-bottom: .75rem;
+}
+
+.card-OurWorks__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 1.2rem;
+}
+
+.smarthome,
+.booking {
+  margin-top: 11rem;
+}
+
+.smarthome__img,
+.onboard__img,
+.booking__img,
+.Juice-product__img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.smarthome__img img,
+.onboard__img img,
+.booking__img img,
+.Juice-product__img img {
+  width: 100%;
+}
+
 .creator__name {
   color: #FFFFFF;
 }
