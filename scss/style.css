@@ -136,7 +136,7 @@ html {
 
 .container {
   margin: 2rem auto;
-  max-width: 1200px;
+  max-width: 1300px;
   padding: 1rem;
 }
 
@@ -155,7 +155,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 30rem;
+  margin-right: 35rem;
   font-family: "Heebo", sans-serif;
   font-weight: 800;
   font-size: 2.25rem;
@@ -166,7 +166,7 @@ header {
 
 /*navigation*/
 .open {
-  left: 0;
+  left: 1rem;
 }
 
 .navigation-menu {
@@ -193,7 +193,7 @@ header {
   font-weight: 500;
   line-height: 36px;
   letter-spacing: 0em;
-  text-align: left;
+  text-align: right;
 }
 
 .toggle {
@@ -216,6 +216,10 @@ header {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.btn-toggle {
+  margin-right: 2rem;
 }
 
 .navigation-menu__content {
@@ -253,13 +257,13 @@ ul:last-child {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    top: 0;
+    top: 3rem;
     left: -250px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     background-color: #FFFFFF;
-    width: 250px;
-    height: 100%;
+    max-width: 350px;
+    max-height: 100%;
   }
 }
 
@@ -271,17 +275,13 @@ ul li {
 
 @media (max-width: 767px) {
   ul li {
-    margin: 15px 10px;
+    margin: 30px 30px;
   }
 }
 
 ul li a {
   text-decoration: none;
   color: #333333;
-}
-
-ul li:last-child {
-  margin-right: 0;
 }
 
 /* --- end of navigation */
@@ -610,6 +610,10 @@ footer {
   background-color: #100E1D;
 }
 
+.card-OurWorks {
+  margin-bottom: 13rem;
+}
+
 .card-OurWorks__title {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -625,7 +629,7 @@ footer {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  grid-gap: 1.2rem;
+  grid-gap: 1.1rem;
 }
 
 .smarthome,
@@ -641,11 +645,67 @@ footer {
   border-radius: 12px;
 }
 
+.smarthome__decription-1,
+.onboard__decription-1,
+.booking__decription-1,
+.Juice-product__decription-1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 0.875;
+  line-height: 1.31rem;
+  color: #828282;
+  margin-top: 1.25rem;
+}
+
+.smarthome__decription-2,
+.onboard__decription-2,
+.booking__decription-2,
+.Juice-product__decription-2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: #333333;
+}
+
 .smarthome__img img,
 .onboard__img img,
 .booking__img img,
 .Juice-product__img img {
   width: 100%;
+}
+
+.see-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #2D9CDB;
+  margin-top: -2rem;
+}
+
+.see-more__arrow {
+  margin-left: 0.3rem;
+  margin-top: .2rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #2D9CDB;
+}
+
+.see-more__arrow:hover {
+  border: 1px solid #2D9CDB;
+  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
 }
 
 .creator__name {
