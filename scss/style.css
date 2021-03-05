@@ -361,17 +361,17 @@ ul li a {
   margin-bottom: 0.56rem;
 }
 
-.card-purpose__email-join {
+.card-purpose__email-join1 {
+  position: relative;
   display: inline-block;
   width: 350px;
-  height: 57px;
   background: #F2F2F2;
   border-radius: 12px;
   margin-left: 12.8rem;
   margin-bottom: 12rem;
 }
 
-.card-purpose__email-join--input {
+.card-purpose__email-join1--input {
   border: none;
   width: 350px;
   height: 57px;
@@ -385,10 +385,12 @@ ul li a {
   letter-spacing: 0em;
   color: #BDBDBD;
   padding-left: 1.31rem;
+  width: 100%;
 }
 
-.card-purpose__email-join--submit {
-  margin-left: -34%;
+.card-purpose__email-join1--submit {
+  margin-left: -6.2rem;
+  position: absolute;
   border: none;
   width: 94px;
   height: 49px;
@@ -400,19 +402,20 @@ ul li a {
   font-weight: 500;
   line-height: 1.7rem;
   color: #F2F2F2;
+  margin-top: 4px;
   cursor: pointer;
   z-index: 2;
 }
 
-.card-purpose__email-join--submit:hover {
+.card-purpose__email-join1--submit:hover {
   background-color: #2d9bdbd8;
 }
 
-.card-purpose__email-join--submit:active, .card-purpose__email-join--submit::-moz-selection, .card-purpose__email-join--submit:focus, .card-purpose__email-join--submit:visited {
+.card-purpose__email-join1--submit:active, .card-purpose__email-join1--submit::-moz-selection, .card-purpose__email-join1--submit:focus, .card-purpose__email-join1--submit:visited {
   outline: none;
 }
 
-.card-purpose__email-join--submit:active, .card-purpose__email-join--submit::selection, .card-purpose__email-join--submit:focus, .card-purpose__email-join--submit:visited {
+.card-purpose__email-join1--submit:active, .card-purpose__email-join1--submit::selection, .card-purpose__email-join1--submit:focus, .card-purpose__email-join1--submit:visited {
   outline: none;
 }
 
@@ -613,10 +616,6 @@ i.card-BackEnd__customBackEnd {
 
 .card-UX__button {
   margin-left: 1.8rem;
-}
-
-footer {
-  background-color: #100E1D;
 }
 
 .card-OurWorks {
@@ -868,10 +867,6 @@ footer {
   background-color: #100E1D;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
 }
 
 .footer-nav {
@@ -883,6 +878,7 @@ footer {
   grid-row: 1 / 2;
   margin-top: 2rem;
   display: block;
+  margin-left: 2rem;
 }
 
 .footer-nav__item {
@@ -890,7 +886,7 @@ footer {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   font-size: 1.125rem;
-  line-height: 3rem;
+  line-height: 2.25rem;
   list-style: none;
   padding: 5px 0;
   margin-left: 0;
@@ -909,7 +905,7 @@ footer {
   font-family: "Heebo", sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 2.25rem;
   line-height: 3.3rem;
   color: #F2F2F2;
   margin-top: 3rem;
@@ -935,6 +931,7 @@ footer {
 .Edie-socialLinks__LinkedIn,
 .Edie-socialLinks__Twitter {
   padding-right: .68rem;
+  cursor: pointer;
 }
 
 .contact-request {
@@ -948,15 +945,25 @@ footer {
 
 .contact-request__question {
   color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: .875rem;
+  line-height: 1.3rem;
+  color: #F2F2F2;
+  margin-top: 3rem;
+  margin-left: 14rem;
+  margin-bottom: .5rem;
 }
 
 .contact-request__email-join {
+  position: relative;
   display: inline-block;
   width: 350px;
   height: 57px;
   background: #F2F2F2;
   border-radius: 12px;
-  margin-left: 12.8rem;
+  margin-left: 14rem;
   margin-bottom: 12rem;
 }
 
@@ -973,11 +980,13 @@ footer {
   line-height: 1.7rem;
   letter-spacing: 0em;
   color: #BDBDBD;
-  padding-left: 0rem;
+  padding-left: 1.31rem;
+  width: 100%;
 }
 
 .contact-request__email-join--submit {
-  margin-left: 0%;
+  position: absolute;
+  margin-left: -6rem;
   border: none;
   width: 94px;
   height: 49px;
@@ -989,6 +998,7 @@ footer {
   font-weight: 500;
   line-height: 1.7rem;
   color: #F2F2F2;
+  margin-top: 4px;
   cursor: pointer;
   z-index: 2;
 }
@@ -1006,12 +1016,23 @@ footer {
 }
 
 .creator {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
   color: #FFFFFF;
+  margin-bottom: 1.5rem;
+}
+
+.creator__name {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.1rem;
+  text-align: center;
+  color: #F2F2F2;
 }
 /*# sourceMappingURL=style.css.map */
