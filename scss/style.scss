@@ -153,6 +153,7 @@ body {
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -176,12 +177,11 @@ header {
 
 .logo {
     display: flex;
-    margin-right: 35rem;
     font-family: $Heebo;
     font-weight: 800;
     font-size: 2.25rem;
     font-family: Heebo;
-    line-height: 53px;
+    line-height: 3.3rem;
     letter-spacing: 0em;
 }
 
@@ -189,7 +189,7 @@ header {
 /*navigation*/
 
 .open {
-    left: 1rem;
+    left: 1.5rem;
 }
 
 .navigation-menu {
@@ -201,12 +201,17 @@ header {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: $Poppins;
     font-weight: 500;
-    line-height: 36px;
+    line-height: 2.25rem;
     letter-spacing: 0em;
     text-align: right;
+    margin-left: 22.5em;
+    @media (max-width: 767px) {
+        margin-left: 3rem;
+        margin-top: 5rem;
+    }
 }
 
 .toggle {
@@ -215,7 +220,7 @@ header {
         text-decoration: none;
         color: $gray1;
         display: block;
-        font-size: 24px;
+        font-size: 1.5rem;
     }
     @media (max-width: 767px) {
         align-items: center;
@@ -224,7 +229,8 @@ header {
 }
 
 .btn-toggle {
-    margin-right: 2rem;
+    margin-left: 2rem;
+    font-size: 24px;
 }
 
 .navigation-menu__content {
@@ -238,15 +244,12 @@ ul {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    &:last-child {
-        margin-right: 0;
-    }
     @media (max-width: 767px) {
         align-items: center;
         position: absolute;
         flex-direction: column;
-        top: 3rem;
-        left: -250px;
+        top: 1.5rem;
+        left: -280px;
         transition: 0.3s;
         background-color: $background-color;
         max-width: 350px;
@@ -794,6 +797,7 @@ i.card-BackEnd__customBackEnd {
     margin-top: 2rem;
     display: block;
     margin-left: 2rem;
+    list-style-type: none;
 }
 
 .footer-nav__item {
@@ -805,6 +809,7 @@ i.card-BackEnd__customBackEnd {
     list-style: none;
     padding: 5px 0;
     margin-left: 0;
+    list-style-type: none;
 }
 
 .Edie {
@@ -917,14 +922,72 @@ i.card-BackEnd__customBackEnd {
     grid-row: 2 / 3;
     color: $background-color;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
-.creator__name {
+.creator__name a {
     font-family: $Montserrat;
-    font-style: normal;
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.1rem;
-    text-align: center;
     color: $gray6;
+    text-decoration: none;
+}
+
+//  laptop and screen sizes smaller than laptop L
+@media only screen and (min-width: 1024px) and (max-device-width: 1400px) {
+    .container {
+        margin: 2rem auto;
+        max-width: 1000px;
+        padding: 1rem;
+    }
+    .toggle-nav {
+        margin-left: 13rem;
+    }
+    .contact-request__question {
+        margin-left: 10.1rem;
+    }
+    .contact-request__email-join {
+        margin-left: 10rem;
+    }
+}
+
+//  teblet and screen sizes smaller than laptop
+@media only screen and (min-width: 767px) and (max-device-width: 1023px) {
+    .container {
+        margin: 0rem auto;
+        max-width: 760px;
+        padding: .5rem;
+    }
+    .toggle-nav {
+        margin-left: 10rem;
+        font-size: 1.1rem;
+    }
+    .team__title {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .team-photos {
+        column-gap: .5rem;
+    }
+    .team-photos__person3 {
+        margin-left: .5rem;
+    }
+    .footer-nav {
+        margin-left: 0rem;
+    }
+    .Edie {
+        margin-left: -5rem;
+    }
+    .contact-request__question {
+        margin-left: 1.2rem;
+    }
+    .contact-request__email-join {
+        width: 350px;
+        margin-left: 1rem;
+    }
+    .contact-request__email-join--input,
+    .card-purpose__email-join1--input {
+        font-size: .9rem;
+    }
 }
