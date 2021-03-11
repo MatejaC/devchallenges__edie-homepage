@@ -122,13 +122,17 @@ hr {
   zoom: 1;
 }
 
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  scroll-behavior: smooth;
 }
 
 html {
@@ -137,17 +141,10 @@ html {
   scroll-behavior: smooth;
 }
 
-*,
-:after,
-:before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 .container {
   margin: 2rem auto;
   max-width: 1300px;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 header {
@@ -168,7 +165,6 @@ header {
   font-family: "Heebo", sans-serif;
   font-weight: 800;
   font-size: 2.25rem;
-  font-family: Heebo;
   line-height: 3.3rem;
   letter-spacing: 0em;
 }
@@ -188,9 +184,6 @@ header {
 }
 
 .toggle-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -203,10 +196,10 @@ header {
   line-height: 2.25rem;
   letter-spacing: 0em;
   text-align: right;
-  margin-left: 22.5em;
+  margin-left: 30rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
   .toggle-nav {
     margin-left: 3rem;
     margin-top: 5rem;
@@ -224,7 +217,7 @@ header {
   font-size: 1.5rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
   .toggle {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -261,7 +254,7 @@ ul {
           align-items: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
   ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -287,7 +280,7 @@ ul li {
   margin-left: 1.5rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
   ul li {
     margin: 30px 30px;
   }
@@ -637,7 +630,7 @@ i.card-BackEnd__customBackEnd {
   margin-bottom: .75rem;
 }
 
-.card-OurWorks__grid {
+.card-OurWorks__wrap {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -1043,32 +1036,107 @@ i.card-BackEnd__customBackEnd {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 1024px) and (max-device-width: 1400px) {
+/*=====smaller than tablet / mobile etc. =====*/
+@media only screen and (max-width: 767.9px) {
   .container {
-    margin: 2rem auto;
-    max-width: 1000px;
-    padding: 1rem;
+    margin: 1 auto;
+    padding: .4rem;
   }
-  .toggle-nav {
-    margin-left: 13rem;
+  .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
   }
-  .contact-request__question {
-    margin-left: 10.1rem;
+  .card-home__image {
+    padding: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
-  .contact-request__email-join {
-    margin-left: 10rem;
+  .card-home__image img {
+    width: 100%;
+  }
+  .card-home__subtitle,
+  .card-purpose__description,
+  .card-purpose__question {
+    margin-left: 2.5rem;
+  }
+  .card-home__title,
+  .card-purpose__title,
+  .card-services__title,
+  .card-services__title,
+  .card-OurWorks__title {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin-left: 2.5rem;
+  }
+  .card-purpose__title {
+    max-width: 227px;
+  }
+  .card-OurWorks__title {
+    max-width: 300px;
+  }
+  .card-purpose__email-join1 {
+    width: 300px;
+    margin-bottom: 7rem;
+    margin-left: 2rem;
+  }
+  .card-purpose__email-join1--input {
+    border: none;
+    width: 300px;
+    font-size: 1rem;
+    line-height: 1;
+    padding-left: .8rem;
+  }
+  .card-services-boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    max-width: 760px;
+  }
+  .card-services-boxes > div {
+    margin-bottom: 2rem;
+    max-width: 760px;
+  }
+  .card-services {
+    margin-bottom: 8rem;
+    max-width: 760px;
+  }
+  .card-OurWorks__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-OurWorks__wrap > div {
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin: auto;
   }
 }
 
-@media only screen and (min-width: 767px) and (max-device-width: 1023px) {
+/*=====tablet and screen sizes smaller than laptop =====*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023.9px) {
   .container {
-    margin: 0rem auto;
-    max-width: 760px;
+    margin: 2rem auto;
+    max-width: 1000px;
     padding: .5rem;
   }
   .toggle-nav {
-    margin-left: 10rem;
-    font-size: 1.1rem;
+    margin-left: 9rem;
+    font-size: 1rem;
   }
   .team__title {
     font-size: 2rem;
@@ -1097,6 +1165,24 @@ i.card-BackEnd__customBackEnd {
   .contact-request__email-join--input,
   .card-purpose__email-join1--input {
     font-size: .9rem;
+  }
+}
+
+/*=====laptop and screen sizes smaller than laptop L ====*/
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1439.9px) {
+  .container {
+    margin: 2rem auto;
+    max-width: 1000px;
+    padding: 1rem;
+  }
+  .toggle-nav {
+    margin-left: 12rem;
+  }
+  .contact-request__question {
+    margin-left: 7.1rem;
+  }
+  .contact-request__email-join {
+    margin-left: 7rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
