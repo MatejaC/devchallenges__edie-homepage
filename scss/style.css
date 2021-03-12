@@ -162,6 +162,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   font-family: "Heebo", sans-serif;
   font-weight: 800;
   font-size: 2.25rem;
@@ -171,7 +174,7 @@ header {
 
 /*navigation*/
 .open {
-  left: 1.5rem;
+  left: 0rem;
 }
 
 .navigation-menu {
@@ -201,8 +204,8 @@ header {
 
 @media (max-width: 767.9px) {
   .toggle-nav {
-    margin-left: 3rem;
-    margin-top: 5rem;
+    margin-left: 0rem;
+    margin-top: 3rem;
   }
 }
 
@@ -211,6 +214,8 @@ header {
 }
 
 .toggle a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   text-decoration: none;
   color: #333333;
   display: block;
@@ -265,7 +270,7 @@ ul {
         -ms-flex-direction: column;
             flex-direction: column;
     top: 1.5rem;
-    left: -280px;
+    left: -270px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     background-color: #FFFFFF;
@@ -277,12 +282,11 @@ ul {
 ul li {
   color: #333333;
   font-family: "Poppins", sans-serif;
-  margin-left: 1.5rem;
 }
 
 @media (max-width: 767.9px) {
   ul li {
-    margin: 30px 30px;
+    margin: 20px 40px;
   }
 }
 
@@ -453,26 +457,29 @@ ul li a {
 }
 
 .card-UX,
-.card-BackEnd {
+.card-BackEnd,
+.card-FrontEnd {
   max-width: 341px;
 }
 
 .card-UX__title,
-.card-BackEnd__title {
+.card-BackEnd__title,
+.card-FrontEnd__title {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 2.25rem;
-  color: .card-UX__title, .card-BackEnd__title #333333;
+  color: .card-UX__title, .card-BackEnd__title, .card-FrontEnd__title #333333;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
 }
 
 .card-UX__description,
-.card-BackEnd__description {
+.card-BackEnd__description,
+.card-FrontEnd__description {
   max-width: 250px;
-  font-family: .card-UX__description, .card-BackEnd__description oppins;
+  font-family: .card-UX__description, .card-BackEnd__description, .card-FrontEnd__description oppins;
   font-style: normal;
   font-weight: normal;
   font-size: 1rem;
@@ -481,14 +488,15 @@ ul li a {
 }
 
 .card-UX__button,
-.card-BackEnd__button {
+.card-BackEnd__button,
+.card-FrontEnd__button {
   width: 116px;
   height: 42px;
   background-color: #E0E0E0;
   border-radius: 12px;
   border: none;
   margin: 2.4rem 0 2.8rem -.15rem;
-  font-family: .card-UX__button, .card-BackEnd__button Poppins;
+  font-family: .card-UX__button, .card-BackEnd__button, .card-FrontEnd__button Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 1rem;
@@ -498,12 +506,14 @@ ul li a {
 }
 
 .card-UX__button:hover,
-.card-BackEnd__button:hover {
+.card-BackEnd__button:hover,
+.card-FrontEnd__button:hover {
   background-color: #BDBDBD;
 }
 
 .card-UX:hover,
-.card-BackEnd:hover {
+.card-BackEnd:hover,
+.card-FrontEnd:hover {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
           box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
@@ -548,56 +558,16 @@ i.card-BackEnd__customBackEnd {
   margin-top: 2.7rem;
 }
 
-.card-FrontEnd {
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
-          box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
-  border-radius: 24px;
-  max-width: 341px;
-  cursor: pointer;
-}
-
 .card-FrontEnd__title {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1.5rem;
-  line-height: 2.25rem;
-  color: .card-FrontEnd__title #333333;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
   margin-left: 2rem;
 }
 
 .card-FrontEnd__description {
-  max-width: 250px;
-  font-family: .card-FrontEnd__description oppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: #4F4F4F;
   margin-left: 2rem;
 }
 
 .card-FrontEnd__button {
-  width: 116px;
-  height: 42px;
-  background-color: #E0E0E0;
-  border-radius: 12px;
-  border: none;
   margin: 2.4rem 0 2.8rem 1.8rem;
-  font-family: .card-FrontEnd__button Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  cursor: pointer;
-  color: #828282;
-}
-
-.card-FrontEnd__button:hover {
-  background-color: #BDBDBD;
 }
 
 .card-BackEnd__title, .card-BackEnd__description {
@@ -1039,8 +1009,8 @@ i.card-BackEnd__customBackEnd {
 /*=====smaller than tablet / mobile etc. =====*/
 @media only screen and (max-width: 767.9px) {
   .container {
-    margin: 1 auto;
-    padding: .4rem;
+    margin: 0 auto;
+    padding: .8rem;
   }
   .logo {
     display: -webkit-box;
@@ -1098,18 +1068,16 @@ i.card-BackEnd__customBackEnd {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     max-width: 760px;
+    margin-left: 0;
   }
   .card-services-boxes > div {
     margin-bottom: 2rem;
-    max-width: 760px;
+    max-width: 500x;
   }
   .card-services {
     margin-bottom: 8rem;
-    max-width: 760px;
+    max-width: 500px;
   }
   .card-OurWorks__wrap {
     display: -webkit-box;
@@ -1120,10 +1088,47 @@ i.card-BackEnd__customBackEnd {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .card-OurWorks__wrap > div {
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-    margin: auto;
+  .see-more {
+    margin-top: 1.5rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 0;
+  }
+  .team-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .team-photos {
+    -webkit-column-gap: .5rem;
+            column-gap: .5rem;
+  }
+  .team__pre-title {
+    margin-top: -5rem;
+  }
+  .team-photos__person3,
+  .team-photos__person1,
+  .team-photos__person2 {
+    width: 100%;
+  }
+  .team-photos__person1 {
+    margin-bottom: .5rem;
+  }
+  .client__line {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    max-width: 600px;
+    margin-top: 6rem;
+    margin-bottom: 2.25rem;
+  }
+  .client__persona-img {
+    width: 18%;
+    margin-bottom: 6rem;
   }
 }
 
@@ -1172,7 +1177,21 @@ i.card-BackEnd__customBackEnd {
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1439.9px) {
   .container {
     margin: 2rem auto;
-    max-width: 1000px;
+    max-width: 1200px;
+    padding: 1rem;
+  }
+  .toggle-nav {
+    margin-left: 12rem;
+  }
+  .contact-request__question {
+    margin-left: 7.1rem;
+  }
+  .contact-request__email-join {
+    margin-left: 7rem;
+  }
+  .container {
+    margin: 2rem auto;
+    max-width: 1200px;
     padding: 1rem;
   }
   .toggle-nav {
