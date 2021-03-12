@@ -260,7 +260,6 @@ ul li {
     margin: 0 10px;
     color: $gray1;
     font-family: $Poppins;
-
     @media (max-width: 767.9px) {
         margin: 20px 40px;
     }
@@ -752,6 +751,8 @@ i.card-BackEnd__customBackEnd {
 .footer-container {
     background-color: $bgFooter;
     display: grid;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-nav {
@@ -938,16 +939,23 @@ i.card-BackEnd__customBackEnd {
         max-width: 300px;
     }
     .card-purpose__email-join1 {
-        width: 300px;
+        width: 290px;
         margin-bottom: 7rem;
-        margin-left: 2rem;
+        margin-left: .4rem;
     }
     .card-purpose__email-join1--input {
         border: none;
-        width: 300px;
-        font-size: 1rem;
-        line-height: 1;
-        padding-left: .8rem;
+        width: 290px;
+        font-size: .9rem;
+        line-height: 1rem;
+        padding-left: .5rem;
+    }
+    .card-purpose__email-join1--submit {
+        margin-left: -4.6rem;
+        width: 69px;
+        height: 40px;
+        font-size: 1.1rem;
+        margin-top: 8.8px;
     }
     .card-services-boxes {
         display: flex;
@@ -993,13 +1001,76 @@ i.card-BackEnd__customBackEnd {
     .client__line {
         font-size: 1.5rem;
         line-height: 2.25rem;
-        max-width: 600px;
         margin-top: 6rem;
         margin-bottom: 2.25rem;
     }
     .client__persona-img {
         width: 18%;
         margin-bottom: 6rem;
+    }
+    .footer-container {
+        display: grid;
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0;
+        padding: 0;
+    }
+    ul.footer-nav {
+        grid-column: 1;
+        grid-row: 1;
+        position: static;
+        color: $background-color;
+        font-family: $Poppins;
+        font-weight: normal;
+        font-size: 1.125rem;
+        line-height: 2.25rem;
+        list-style: none;
+        padding: 5px 0;
+        margin-left: 0rem;
+        list-style-type: none;
+        background-color: $bgFooter;
+    }
+    .Edie {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .Edie-logo,
+    .Edie-socialLinks {
+        margin-left: 2rem;
+    }
+    .contact-request {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .contact-request__question {
+        margin-left: 2rem;
+    }
+    .contact-request__email-join {
+        max-width: 290px;
+        height: 47px;
+        font-size: 10px;
+        line-height: 15px;
+        margin-left: .18rem;
+    }
+    .contact-request__email-join--input {
+        font-size: .9rem;
+        line-height: 1rem;
+        padding-left: .5rem;
+    }
+    .contact-request__email-join--submit {
+        width: 71px;
+        height: 39px;
+        margin-left: -4.7rem;
+        margin-top: 9px;
+    }
+    .creator {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .creator__name a {
+        font-size: 0.8rem;
+        justify-content: center;
+        margin: 0;
     }
 }
 
