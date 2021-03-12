@@ -1,290 +1,913 @@
-    @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Montserrat:wght@600&family=Poppins:wght@300;400;500;600;700&display=swap');
-    @font-face {
-        font-family: 'Material Icons';
-        font-style: normal;
-        font-weight: 400;
-        src: url(https://example.com/MaterialIcons-Regular.eot);
-        /* For IE6-8 */
-        src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Montserrat:wght@600&family=Poppins:wght@300;400;500;600;700&display=swap');
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot);
+    /* For IE6-8 */
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+
+/*colors*/
+
+$background-color: #FFFFFF;
+$gray1: #333333;
+$gray2: #4F4F4F;
+$gray3: #828282;
+$gray4: #BDBDBD;
+$gray5bgButtonServices: #E0E0E0;
+$bgFooter: #100E1D;
+$gray6: #F2F2F2;
+$blue: #2D9CDB;
+$blueHover: #2d9bdbd8;
+$green: #27AE60;
+$red: #EB5757;
+
+/*fonts*/
+
+$Poppins: 'Poppins',
+sans-serif;
+$Heebo: 'Heebo',
+sans-serif;
+$Montserrat: 'Montserrat',
+sans-serif;
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container {
+    margin: 2rem auto;
+    max-width: 1300px;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: $background-color;
+    margin-bottom: 6rem;
+}
+
+.logo {
+    display: flex;
+    flex-grow: 1;
+    font-family: $Heebo;
+    font-weight: 800;
+    font-size: 2.25rem;
+    line-height: 3.3rem;
+    letter-spacing: 0em;
+}
+
+
+/*navigation*/
+
+.open {
+    left: 0rem;
+}
+
+.navigation-menu {
+    display: flex;
+    flex-grow: 1;
+}
+
+.toggle-nav {
+    justify-content: space-between;
+    flex-grow: 1;
+    font-size: 1.5rem;
+    font-family: $Poppins;
+    font-weight: 500;
+    line-height: 2.25rem;
+    letter-spacing: 0em;
+    text-align: right;
+    margin-left: 30rem;
+    @media (max-width: 767.9px) {
+        margin-left: 0rem;
+        margin-top: 3rem;
     }
-    /*colors*/
-    
-    $background-color: #FFFFFF;
-    $gray1: #333333;
-    $gray2: #4F4F4F;
-    $gray3: #828282;
-    $gray4: #BDBDBD;
-    $gray5bgButtonServices: #E0E0E0;
-    $bgFooter: #100E1D;
-    $gray6: #F2F2F2;
-    $blue: #2D9CDB;
-    $blueHover: #2d9bdbd8;
-    $green: #27AE60;
-    $red: #EB5757;
-    /*fonts*/
-    
-    $Poppins: 'Poppins',
-    sans-serif;
-    $Heebo: 'Heebo',
-    sans-serif;
-    $Montserrat: 'Montserrat',
-    sans-serif;
-    .material-icons {
-        font-family: 'Material Icons';
-        font-weight: normal;
-        font-style: normal;
-        font-size: 18px;
-        /* Preferred icon size */
-        display: inline-block;
-        line-height: 1;
-        text-transform: none;
-        letter-spacing: normal;
-        word-wrap: normal;
-        white-space: nowrap;
-        direction: ltr;
-        /* Support for all WebKit browsers. */
-        -webkit-font-smoothing: antialiased;
-        /* Support for Safari and Chrome. */
-        text-rendering: optimizeLegibility;
-        /* Support for Firefox. */
-        -moz-osx-font-smoothing: grayscale;
-        /* Support for IE. */
-        font-feature-settings: 'liga';
-    }
-    
-    html,
-    body,
-    div,
-    span,
-    applet,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    a,
-    abbr,
-    acronym,
-    address,
-    big,
-    cite,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    s,
-    samp,
-    small,
-    strike,
-    strong,
-    sub,
-    sup,
-    tt,
-    var,
-    b,
-    u,
-    i,
-    center,
-    dl,
-    dt,
-    dd,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    caption,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td,
-    article,
-    aside,
-    canvas,
-    details,
-    embed,
-    figure,
-    figcaption,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    output,
-    ruby,
-    section,
-    summary,
-    time,
-    mark,
-    audio,
-    video,
-    hr {
-        margin: 0;
-        padding: 0;
-        border: 0;
-    }
-    
-    .clearfix {
-        zoom: 1;
-    }
-    
-    *,
-    *:before,
-    *:after {
-        box-sizing: inherit;
-    }
-    
-    body {
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-    }
-    
-    html {
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-    }
-    
-    .container {
-        margin: 2rem auto;
-        max-width: 1300px;
-        padding: 2rem;
-    }
-    
-    header {
-        display: flex;
-        align-items: center;
-        background-color: $background-color;
-        margin-bottom: 6rem;
-    }
-    
-    .logo {
-        display: flex;
-        flex-grow: 1;
-        font-family: $Heebo;
-        font-weight: 800;
-        font-size: 2.25rem;
-        line-height: 3.3rem;
-        letter-spacing: 0em;
-    }
-    /*navigation*/
-    
-    .open {
-        left: 0rem;
-    }
-    
-    .navigation-menu {
-        display: flex;
-        flex-grow: 1;
-    }
-    
-    .toggle-nav {
-        justify-content: space-between;
-        flex-grow: 1;
-        font-size: 1.5rem;
+}
+
+.toggle {
+    display: none;
+    a {
         font-family: $Poppins;
         font-weight: 500;
-        line-height: 2.25rem;
-        letter-spacing: 0em;
-        text-align: right;
-        margin-left: 30rem;
-        @media (max-width: 767.9px) {
-            margin-left: 0rem;
-            margin-top: 3rem;
-        }
-    }
-    
-    .toggle {
-        display: none;
-        a {
-            font-family: $Poppins;
-            font-weight: 500;
-            text-decoration: none;
-            color: $gray1;
-            display: block;
-            font-size: 1.5rem;
-        }
-        @media (max-width: 767.9px) {
-            align-items: center;
-            display: flex;
-        }
-    }
-    
-    .btn-toggle {
-        margin-left: 2rem;
-        font-size: 24px;
-    }
-    
-    .navigation-menu__content {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    ul {
-        list-style-type: none;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        @media (max-width: 767.9px) {
-            align-items: center;
-            position: absolute;
-            flex-direction: column;
-            top: 1.5rem;
-            left: -270px;
-            transition: 0.3s;
-            background-color: $background-color;
-            max-width: 350px;
-            max-height: 100%;
-        }
-    }
-    
-    ul li {
+        text-decoration: none;
         color: $gray1;
-        font-family: $Poppins;
-        @media (max-width: 767.9px) {
-            margin: 20px 40px;
-        }
-        a {
-            text-decoration: none;
-            color: $gray1;
-        }
+        display: block;
+        font-size: 1.5rem;
     }
-    /* --- end of navigation */
-    
-    .card-home__subtitle {
+    @media (max-width: 767.9px) {
+        align-items: center;
+        display: flex;
+    }
+}
+
+.btn-toggle {
+    margin-left: 2rem;
+    font-size: 24px;
+}
+
+.navigation-menu__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    @media (max-width: 767.9px) {
+        align-items: center;
+        position: absolute;
+        flex-direction: column;
+        top: 1.5rem;
+        left: -270px;
+        transition: 0.3s;
+        background-color: $background-color;
+        max-width: 350px;
+        max-height: 100%;
+    }
+}
+
+ul li {
+    color: $gray1;
+    font-family: $Poppins;
+    @media (max-width: 767.9px) {
+        margin: 20px 40px;
+    }
+    a {
+        text-decoration: none;
+        color: $gray1;
+    }
+}
+
+
+/* --- end of navigation */
+
+.card-home__subtitle {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: $blue;
+    margin-bottom: 1rem;
+    margin-left: 13rem;
+}
+
+.card-home__title {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 3rem;
+    color: $gray1;
+    line-height: 4.5rem;
+    max-width: 543px;
+    margin-bottom: 2rem;
+    margin-left: 13rem;
+}
+
+.card-home__image {
+    padding: 0;
+    flex: 1;
+    img {
+        width: 100%;
+    }
+}
+
+.card-purpose__title {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 3rem;
+    color: $gray1;
+    line-height: 4.5rem;
+    font-family: $Poppins;
+    max-width: 370px;
+    margin-top: 2.5rem;
+    margin-left: 13rem;
+    margin-bottom: 2.5rem;
+}
+
+.card-purpose__description {
+    font-family: $Poppins;
+    font-size: 1.125rem;
+    line-height: 1.9rem;
+    color: $gray2;
+    font-weight: 400;
+    margin-left: 13rem;
+    max-width: 450px;
+    margin-bottom: 2.5rem;
+}
+
+.card-purpose__question {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.3rem;
+    color: $gray3;
+    margin-left: 13rem;
+    margin-top: 2.6rem;
+    margin-bottom: 0.56rem;
+}
+
+.card-purpose__email-join1 {
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    background: $gray6;
+    border-radius: 12px;
+    margin-left: 12.8rem;
+    margin-bottom: 12rem;
+}
+
+.card-purpose__email-join1--input {
+    border: none;
+    width: 350px;
+    height: 57px;
+    background-color: $gray6;
+    border-radius: 12px;
+    font-family: $Poppins;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.7rem;
+    letter-spacing: 0em;
+    color: $gray4;
+    padding-left: 1.31rem;
+    width: 100%;
+}
+
+.card-purpose__email-join1--submit {
+    margin-left: -6.2rem;
+    position: absolute;
+    border: none;
+    width: 94px;
+    height: 49px;
+    background-color: $blue;
+    border-radius: 12px;
+    font-family: $Poppins;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.7rem;
+    color: $gray6;
+    margin-top: 4px;
+    cursor: pointer;
+    z-index: 2;
+    &:hover {
+        background-color: $blueHover;
+    }
+    &:active,
+    &::selection,
+    &:focus,
+    &:visited {
+        outline: none;
+    }
+}
+
+.card-services {
+    margin-bottom: 12rem;
+}
+
+.card-services__title {
+    font-family: $Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 3.38rem;
+    color: $gray1;
+    margin-left: 5rem;
+    max-width: 346px;
+    margin-bottom: 2.6rem;
+}
+
+.card-services-boxes {
+    display: flex;
+    margin-left: 3rem;
+    justify-content: space-between;
+}
+
+.card-services-boxes>div {
+    flex: 1 1 auto;
+    justify-content: space-between;
+}
+
+.card-UX,
+.card-BackEnd,
+.card-FrontEnd {
+    max-width: 341px;
+    &__title {
         font-family: $Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        color: &$gray1;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    &__description {
+        max-width: 250px;
+        font-family: &oppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $gray2;
+    }
+    &__button {
+        width: 116px;
+        height: 42px;
+        background-color: $gray5bgButtonServices;
+        border-radius: 12px;
+        border: none;
+        margin: 2.4rem 0 2.8rem -.15rem;
+        font-family: &Poppins;
+        font-style: normal;
         font-weight: 500;
         font-size: 1rem;
-        line-height: 1.6rem;
-        color: $blue;
-        margin-bottom: 1rem;
-        margin-left: 13rem;
+        line-height: 1.5rem;
+        cursor: pointer;
+        color: $gray3;
+        &:hover {
+            background-color: $gray4;
+        }
     }
-    
-    .card-home__title {
-        font-family: $Poppins;
-        font-weight: 500;
-        font-size: 3rem;
-        color: $gray1;
-        line-height: 4.5rem;
-        max-width: 543px;
-        margin-bottom: 2rem;
-        margin-left: 13rem;
+    &:hover {
+        background: $background-color;
+        box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+        border-radius: 24px;
+        max-width: 341px;
+        cursor: pointer;
     }
-    
+}
+
+i.card-UX__customUX {
+    font-size: 2.6rem;
+    color: $background-color;
+    background-color: $blue;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 16px;
+    padding: 16px 0px 0px 20px;
+    margin-top: 2.7rem;
+    margin-left: 2rem;
+}
+
+i.card-FrontEnd__customFrontEnd {
+    font-size: 2.7rem;
+    color: $background-color;
+    background-color: $green;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 16px;
+    padding: 20px 0px 0px 21px;
+    margin-left: 2rem;
+    margin-top: 2.7rem;
+}
+
+i.card-BackEnd__customBackEnd {
+    font-size: 2.8rem;
+    color: $background-color;
+    background-color: $red;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 16px;
+    padding: 15px 0px 0px 19px;
+    margin-left: 2rem;
+    margin-top: 2.7rem;
+}
+
+.card-FrontEnd {
+    &__title {
+        margin-left: 2rem;
+    }
+    &__description {
+        margin-left: 2rem;
+    }
+    &__button {
+        margin: 2.4rem 0 2.8rem 1.8rem;
+    }
+}
+
+.card-BackEnd {
+    &__title,
+    &__description {
+        margin-left: 2rem;
+    }
+    &__button {
+        margin-left: 1.8rem;
+    }
+}
+
+.card-UX {
+    &__title,
+    &__description {
+        margin-left: 2rem;
+    }
+    &__button {
+        margin-left: 1.8rem;
+    }
+}
+
+.card-OurWorks {
+    margin-bottom: 13rem;
+}
+
+.card-OurWorks__title {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 3.375rem;
+    color: $gray1;
+    max-width: 448px;
+    margin-bottom: .75rem;
+}
+
+.card-OurWorks__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.1rem;
+}
+
+.smarthome,
+.booking {
+    margin-top: 11rem;
+}
+
+.smarthome__img,
+.onboard__img,
+.booking__img,
+.Juice-product__img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.smarthome__decription-1,
+.onboard__decription-1,
+.booking__decription-1,
+.Juice-product__decription-1 {
+    font-family: $Poppins;
+    font-weight: 300;
+    font-size: 0.875;
+    line-height: 1.31rem;
+    color: $gray3;
+    margin-top: 1.25rem;
+}
+
+.smarthome__decription-2,
+.onboard__decription-2,
+.booking__decription-2,
+.Juice-product__decription-2 {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: $gray1;
+}
+
+.smarthome__img img,
+.onboard__img img,
+.booking__img img,
+.Juice-product__img img {
+    width: 100%;
+}
+
+.see-more {
+    display: flex;
+    justify-content: flex-end;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: $blue;
+    margin-top: -2rem;
+}
+
+.see-more__arrow {
+    margin-left: 0.3rem;
+    margin-top: .2rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: $blue;
+    &:hover {
+        border: 1px solid$blue;
+        transform: translateX(10px);
+        -webkit-transform: translateX(10px);
+        -moz-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        -o-transform: translateX(10px);
+    }
+}
+
+.team-wrap {
+    display: flex;
+}
+
+.team-wrap>div {
+    flex: 1 70%;
+}
+
+.team__pre-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+    color: $red;
+    margin-bottom: .5rem;
+    margin-top: 11rem;
+}
+
+.team__title {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 3.4rem;
+    color: $gray1;
+    max-width: 280px;
+    margin-bottom: 0.875rem;
+}
+
+.team__about {
+    font-family: $Poppins;
+    font-size: 1rem;
+    line-height: 24px;
+    color: $gray2;
+    max-width: 270px;
+}
+
+.team-photos {
+    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 0;
+    align-self: stretch;
+    justify-self: stretch;
+}
+
+.team-photos__person3 {
+    grid-column: 1 / 1;
+    grid-row: 2 / 4;
+}
+
+.team-photos__person1 {
+    grid-column: 2 / 2;
+    grid-row: 1 / 3;
+    margin-top: 2.2rem;
+}
+
+.team-photos__person2 {
+    grid-column: 2 / 2;
+    grid-row: 3 / 5;
+}
+
+.team-photos img {
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+}
+
+.client__line {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 3.375rem;
+    color: $gray1;
+    max-width: 937px;
+    margin-top: 12rem;
+    margin-bottom: 2.25rem;
+}
+
+.client__persona-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.client__persona-wrap2>div {
+    display: flex;
+}
+
+.client__persona-img {
+    width: 7%;
+    margin-right: 1rem;
+    margin-bottom: 12rem;
+    border-radius: 12px;
+}
+
+.client__persona-img img {
+    width: 100%;
+}
+
+.client__persona-name {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: $gray1;
+    margin-left: 1rem;
+}
+
+.client__persona-firm {
+    font-family: $Poppins;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.67rem;
+    color: $gray3;
+    margin-left: 1rem;
+}
+
+.footer-container {
+    background-color: $bgFooter;
+    display: grid;
+}
+
+.footer-nav {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-top: 2rem;
+    display: block;
+    margin-left: 2rem;
+    list-style-type: none;
+}
+
+.footer-nav__item {
+    color: $background-color;
+    font-family: $Poppins;
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 2.25rem;
+    list-style: none;
+    padding: 5px 0;
+    margin-left: 0;
+    list-style-type: none;
+}
+
+.Edie {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.Edie-logo {
+    font-family: $Heebo;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.25rem;
+    line-height: 3.3rem;
+    color: $gray6;
+    margin-top: 3rem;
+    margin-left: 7rem;
+}
+
+.Edie-socialLinks {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: .5rem;
+    margin-left: 7rem;
+}
+
+.Edie-socialLinks__instagram,
+.Edie-socialLinks__LinkedIn,
+.Edie-socialLinks__Twitter {
+    padding-right: .68rem;
+    cursor: pointer;
+}
+
+.contact-request {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.contact-request__question {
+    color: $background-color;
+    font-family: $Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.3rem;
+    color: $gray6;
+    margin-top: 3rem;
+    margin-left: 14rem;
+    margin-bottom: .5rem;
+}
+
+.contact-request__email-join {
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    height: 57px;
+    background: $gray6;
+    border-radius: 12px;
+    margin-left: 14rem;
+    margin-bottom: 12rem;
+}
+
+.contact-request__email-join--input {
+    border: none;
+    width: 350px;
+    height: 57px;
+    background-color: $gray6;
+    border-radius: 12px;
+    font-family: $Poppins;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.7rem;
+    letter-spacing: 0em;
+    color: $gray4;
+    padding-left: 1.31rem;
+    width: 100%;
+}
+
+.contact-request__email-join--submit {
+    position: absolute;
+    margin-left: -6rem;
+    border: none;
+    width: 94px;
+    height: 49px;
+    background-color: $blue;
+    border-radius: 12px;
+    font-family: $Poppins;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.7rem;
+    color: $gray6;
+    margin-top: 4px;
+    cursor: pointer;
+    z-index: 2;
+    &:hover {
+        background-color: $blueHover;
+    }
+    &:active,
+    &::selection,
+    &:focus,
+    &:visited {
+        outline: none;
+    }
+}
+
+.creator {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    color: $background-color;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.creator__name a {
+    font-family: $Montserrat;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.1rem;
+    color: $gray6;
+    text-decoration: none;
+}
+
+
+/*=====smaller than tablet / mobile etc. =====*/
+
+@media only screen and (max-width: 767.9px) {
+    .container {
+        margin: 0 auto;
+        padding: .8rem;
+    }
+    .logo {
+        display: flex;
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+    }
     .card-home__image {
         padding: 0;
         flex: 1;
@@ -292,774 +915,164 @@
             width: 100%;
         }
     }
-    
-    .card-purpose__title {
-        font-family: $Poppins;
-        font-weight: 500;
-        font-size: 3rem;
-        color: $gray1;
-        line-height: 4.5rem;
-        font-family: $Poppins;
-        max-width: 370px;
-        margin-top: 2.5rem;
-        margin-left: 13rem;
-        margin-bottom: 2.5rem;
-    }
-    
-    .card-purpose__description {
-        font-family: $Poppins;
-        font-size: 1.125rem;
-        line-height: 1.9rem;
-        color: $gray2;
-        font-weight: 400;
-        margin-left: 13rem;
-        max-width: 450px;
-        margin-bottom: 2.5rem;
-    }
-    
+    .card-home__subtitle,
+    .card-purpose__description,
     .card-purpose__question {
-        font-family: $Poppins;
-        font-weight: 500;
-        font-size: 0.875rem;
-        line-height: 1.3rem;
-        color: $gray3;
-        margin-left: 13rem;
-        margin-top: 2.6rem;
-        margin-bottom: 0.56rem;
+        margin-left: 2.5rem;
     }
-    
+    .card-home__title,
+    .card-purpose__title,
+    .card-services__title,
+    .card-services__title,
+    .card-OurWorks__title {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        margin-left: 2.5rem;
+    }
+    .card-purpose__title {
+        max-width: 227px;
+    }
+    .card-OurWorks__title {
+        max-width: 300px;
+    }
     .card-purpose__email-join1 {
-        position: relative;
-        display: inline-block;
-        width: 350px;
-        background: $gray6;
-        border-radius: 12px;
-        margin-left: 12.8rem;
-        margin-bottom: 12rem;
+        width: 300px;
+        margin-bottom: 7rem;
+        margin-left: 2rem;
     }
-    
     .card-purpose__email-join1--input {
         border: none;
-        width: 350px;
-        height: 57px;
-        background-color: $gray6;
-        border-radius: 12px;
-        font-family: $Poppins;
-        font-size: 1.125rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.7rem;
-        letter-spacing: 0em;
-        color: $gray4;
-        padding-left: 1.31rem;
-        width: 100%;
+        width: 300px;
+        font-size: 1rem;
+        line-height: 1;
+        padding-left: .8rem;
     }
-    
-    .card-purpose__email-join1--submit {
-        margin-left: -6.2rem;
-        position: absolute;
-        border: none;
-        width: 94px;
-        height: 49px;
-        background-color: $blue;
-        border-radius: 12px;
-        font-family: $Poppins;
-        font-size: 1.125rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.7rem;
-        color: $gray6;
-        margin-top: 4px;
-        cursor: pointer;
-        z-index: 2;
-        &:hover {
-            background-color: $blueHover;
-        }
-        &:active,
-        &::selection,
-        &:focus,
-        &:visited {
-            outline: none;
-        }
-    }
-    
-    .card-services {
-        margin-bottom: 12rem;
-    }
-    
-    .card-services__title {
-        font-family: $Poppins;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 2.25rem;
-        line-height: 3.38rem;
-        color: $gray1;
-        margin-left: 5rem;
-        max-width: 346px;
-        margin-bottom: 2.6rem;
-    }
-    
     .card-services-boxes {
         display: flex;
-        margin-left: 3rem;
-        justify-content: space-between;
+        flex-direction: column;
+        max-width: 760px;
+        margin-left: 0;
     }
-    
     .card-services-boxes>div {
-        flex: 1 1 auto;
-        justify-content: space-between;
+        margin-bottom: 2rem;
+        max-width: 500x;
     }
-    
-    .card-UX,
-    .card-BackEnd,
-    .card-FrontEnd {
-        max-width: 341px;
-        &__title {
-            font-family: $Poppins;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 1.5rem;
-            line-height: 2.25rem;
-            color: &$gray1;
-            margin-top: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        &__description {
-            max-width: 250px;
-            font-family: &oppins;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 1rem;
-            line-height: 1.5rem;
-            color: $gray2;
-        }
-        &__button {
-            width: 116px;
-            height: 42px;
-            background-color: $gray5bgButtonServices;
-            border-radius: 12px;
-            border: none;
-            margin: 2.4rem 0 2.8rem -.15rem;
-            font-family: &Poppins;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 1rem;
-            line-height: 1.5rem;
-            cursor: pointer;
-            color: $gray3;
-            &:hover {
-                background-color: $gray4;
-            }
-        }
-        &:hover {
-            background: $background-color;
-            box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
-            border-radius: 24px;
-            max-width: 341px;
-            cursor: pointer;
-        }
+    .card-services {
+        margin-bottom: 8rem;
+        max-width: 500px;
     }
-    
-    i.card-UX__customUX {
-        font-size: 2.6rem;
-        color: $background-color;
-        background-color: $blue;
-        width: 4rem;
-        height: 4rem;
-        border-radius: 16px;
-        padding: 16px 0px 0px 20px;
-        margin-top: 2.7rem;
-        margin-left: 2rem;
-    }
-    
-    i.card-FrontEnd__customFrontEnd {
-        font-size: 2.7rem;
-        color: $background-color;
-        background-color: $green;
-        width: 4rem;
-        height: 4rem;
-        border-radius: 16px;
-        padding: 20px 0px 0px 21px;
-        margin-left: 2rem;
-        margin-top: 2.7rem;
-    }
-    
-    i.card-BackEnd__customBackEnd {
-        font-size: 2.8rem;
-        color: $background-color;
-        background-color: $red;
-        width: 4rem;
-        height: 4rem;
-        border-radius: 16px;
-        padding: 15px 0px 0px 19px;
-        margin-left: 2rem;
-        margin-top: 2.7rem;
-    }
-    
-    .card-FrontEnd {
-        &__title {
-            margin-left: 2rem;
-        }
-        &__description {
-            margin-left: 2rem;
-        }
-        &__button {
-            margin: 2.4rem 0 2.8rem 1.8rem;
-        }
-    }
-    
-    .card-BackEnd {
-        &__title,
-        &__description {
-            margin-left: 2rem;
-        }
-        &__button {
-            margin-left: 1.8rem;
-        }
-    }
-    
-    .card-UX {
-        &__title,
-        &__description {
-            margin-left: 2rem;
-        }
-        &__button {
-            margin-left: 1.8rem;
-        }
-    }
-    
-    .card-OurWorks {
-        margin-bottom: 13rem;
-    }
-    
-    .card-OurWorks__title {
-        font-family: $Poppins;
-        font-weight: 500;
-        font-size: 2.25rem;
-        line-height: 3.375rem;
-        color: $gray1;
-        max-width: 448px;
-        margin-bottom: .75rem;
-    }
-    
     .card-OurWorks__wrap {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1.1rem;
-    }
-    
-    .smarthome,
-    .booking {
-        margin-top: 11rem;
-    }
-    
-    .smarthome__img,
-    .onboard__img,
-    .booking__img,
-    .Juice-product__img {
-        width: 100%;
-        border-radius: 12px;
-    }
-    
-    .smarthome__decription-1,
-    .onboard__decription-1,
-    .booking__decription-1,
-    .Juice-product__decription-1 {
-        font-family: $Poppins;
-        font-weight: 300;
-        font-size: 0.875;
-        line-height: 1.31rem;
-        color: $gray3;
-        margin-top: 1.25rem;
-    }
-    
-    .smarthome__decription-2,
-    .onboard__decription-2,
-    .booking__decription-2,
-    .Juice-product__decription-2 {
-        font-family: $Poppins;
-        font-weight: 500;
-        font-size: 1.5rem;
-        line-height: 2.25rem;
-        color: $gray1;
-    }
-    
-    .smarthome__img img,
-    .onboard__img img,
-    .booking__img img,
-    .Juice-product__img img {
-        width: 100%;
-    }
-    
-    .see-more {
         display: flex;
-        justify-content: flex-end;
-        font-family: Poppins;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 36px;
-        color: $blue;
-        margin-top: -2rem;
+        flex-direction: column;
     }
-    
-    .see-more__arrow {
-        margin-left: 0.3rem;
-        margin-top: .2rem;
-        background-color: transparent;
-        outline: none;
-        border: none;
-        color: $blue;
-        &:hover {
-            border: 1px solid$blue;
-            transform: translateX(10px);
-            -webkit-transform: translateX(10px);
-            -moz-transform: translateX(10px);
-            -ms-transform: translateX(10px);
-            -o-transform: translateX(10px);
-        }
+    .see-more {
+        margin-top: 1.5rem;
+        justify-content: flex-start;
+        margin-left: 0;
     }
-    
     .team-wrap {
         display: flex;
+        flex-direction: column;
     }
-    
-    .team-wrap>div {
-        flex: 1 70%;
-    }
-    
-    .team__pre-title {
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1.125rem;
-        line-height: 1.7rem;
-        color: $red;
-        margin-bottom: .5rem;
-        margin-top: 11rem;
-    }
-    
-    .team__title {
-        font-family: $Poppins;
-        font-weight: 500;
-        font-size: 2.25rem;
-        line-height: 3.4rem;
-        color: $gray1;
-        max-width: 280px;
-        margin-bottom: 0.875rem;
-    }
-    
-    .team__about {
-        font-family: $Poppins;
-        font-size: 1rem;
-        line-height: 24px;
-        color: $gray2;
-        max-width: 270px;
-    }
-    
     .team-photos {
-        justify-content: flex-end;
-        display: grid;
-        grid-template-columns: 1fr, 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        column-gap: 1.5rem;
-        row-gap: 0;
-        align-self: stretch;
-        justify-self: stretch;
+        column-gap: .5rem;
     }
-    
-    .team-photos__person3 {
-        grid-column: 1 / 1;
-        grid-row: 2 / 4;
+    .team__pre-title {
+        margin-top: -5rem;
     }
-    
-    .team-photos__person1 {
-        grid-column: 2 / 2;
-        grid-row: 1 / 3;
-        margin-top: 2.2rem;
-    }
-    
+    .team-photos__person3,
+    .team-photos__person1,
     .team-photos__person2 {
-        grid-column: 2 / 2;
-        grid-row: 3 / 5;
-    }
-    
-    .team-photos img {
-        border-radius: 24px;
-        -webkit-border-radius: 24px;
-        -moz-border-radius: 24px;
-        -ms-border-radius: 24px;
-        -o-border-radius: 24px;
-    }
-    
-    .client__line {
-        font-family: $Poppins;
-        font-weight: 500;
-        font-size: 2.25rem;
-        line-height: 3.375rem;
-        color: $gray1;
-        max-width: 937px;
-        margin-top: 12rem;
-        margin-bottom: 2.25rem;
-    }
-    
-    .client__persona-wrap {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .client__persona-wrap2>div {
-        display: flex;
-    }
-    
-    .client__persona-img {
-        width: 7%;
-        margin-right: 1rem;
-        margin-bottom: 12rem;
-        border-radius: 12px;
-    }
-    
-    .client__persona-img img {
         width: 100%;
     }
-    
-    .client__persona-name {
-        font-family: $Poppins;
-        font-weight: 500;
+    .team-photos__person1 {
+        margin-bottom: .5rem;
+    }
+    .client__line {
         font-size: 1.5rem;
         line-height: 2.25rem;
-        color: $gray1;
-        margin-left: 1rem;
+        max-width: 600px;
+        margin-top: 6rem;
+        margin-bottom: 2.25rem;
     }
-    
-    .client__persona-firm {
-        font-family: $Poppins;
-        font-weight: 500;
-        font-size: 1.125rem;
-        line-height: 1.67rem;
-        color: $gray3;
-        margin-left: 1rem;
+    .client__persona-img {
+        width: 18%;
+        margin-bottom: 6rem;
     }
-    
-    .footer-container {
-        background-color: $bgFooter;
-        display: grid;
+}
+
+
+/*=====tablet and screen sizes smaller than laptop =====*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023.9px) {
+    .container {
+        margin: 2rem auto;
+        max-width: 1000px;
+        padding: .5rem;
     }
-    
+    .toggle-nav {
+        margin-left: 9rem;
+        font-size: 1rem;
+    }
+    .team__title {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .team-photos {
+        column-gap: .5rem;
+    }
+    .team-photos__person3 {
+        margin-left: .5rem;
+    }
     .footer-nav {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        margin-top: 2rem;
-        display: block;
-        margin-left: 2rem;
-        list-style-type: none;
+        margin-left: 0rem;
     }
-    
-    .footer-nav__item {
-        color: $background-color;
-        font-family: $Poppins;
-        font-weight: normal;
-        font-size: 1.125rem;
-        line-height: 2.25rem;
-        list-style: none;
-        padding: 5px 0;
-        margin-left: 0;
-        list-style-type: none;
-    }
-    
     .Edie {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
+        margin-left: -5rem;
     }
-    
-    .Edie-logo {
-        font-family: $Heebo;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 2.25rem;
-        line-height: 3.3rem;
-        color: $gray6;
-        margin-top: 3rem;
-        margin-left: 7rem;
-    }
-    
-    .Edie-socialLinks {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        margin-top: .5rem;
-        margin-left: 7rem;
-    }
-    
-    .Edie-socialLinks__instagram,
-    .Edie-socialLinks__LinkedIn,
-    .Edie-socialLinks__Twitter {
-        padding-right: .68rem;
-        cursor: pointer;
-    }
-    
-    .contact-request {
-        grid-column: 3 / 4;
-        grid-row: 1 / 2;
-    }
-    
     .contact-request__question {
-        color: $background-color;
-        font-family: $Poppins;
-        font-style: normal;
-        font-weight: 500;
-        font-size: .875rem;
-        line-height: 1.3rem;
-        color: $gray6;
-        margin-top: 3rem;
-        margin-left: 14rem;
-        margin-bottom: .5rem;
+        margin-left: 1.2rem;
     }
-    
     .contact-request__email-join {
-        position: relative;
-        display: inline-block;
         width: 350px;
-        height: 57px;
-        background: $gray6;
-        border-radius: 12px;
-        margin-left: 14rem;
-        margin-bottom: 12rem;
+        margin-left: 1rem;
     }
-    
-    .contact-request__email-join--input {
-        border: none;
-        width: 350px;
-        height: 57px;
-        background-color: $gray6;
-        border-radius: 12px;
-        font-family: $Poppins;
-        font-size: 1.125rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.7rem;
-        letter-spacing: 0em;
-        color: $gray4;
-        padding-left: 1.31rem;
-        width: 100%;
+    .contact-request__email-join--input,
+    .card-purpose__email-join1--input {
+        font-size: .9rem;
     }
-    
-    .contact-request__email-join--submit {
-        position: absolute;
-        margin-left: -6rem;
-        border: none;
-        width: 94px;
-        height: 49px;
-        background-color: $blue;
-        border-radius: 12px;
-        font-family: $Poppins;
-        font-size: 1.125rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.7rem;
-        color: $gray6;
-        margin-top: 4px;
-        cursor: pointer;
-        z-index: 2;
-        &:hover {
-            background-color: $blueHover;
-        }
-        &:active,
-        &::selection,
-        &:focus,
-        &:visited {
-            outline: none;
-        }
+}
+
+
+/*=====laptop and screen sizes smaller than laptop L ====*/
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1439.9px) {
+    .container {
+        margin: 2rem auto;
+        max-width: 1200px;
+        padding: 1rem;
     }
-    
-    .creator {
-        grid-column: 1 / 4;
-        grid-row: 2 / 3;
-        color: $background-color;
-        margin-bottom: 1.5rem;
-        text-align: center;
+    .toggle-nav {
+        margin-left: 12rem;
     }
-    
-    .creator__name a {
-        font-family: $Montserrat;
-        font-weight: 500;
-        font-size: 0.875rem;
-        line-height: 1.1rem;
-        color: $gray6;
-        text-decoration: none;
+    .contact-request__question {
+        margin-left: 7.1rem;
     }
-    /*=====smaller than tablet / mobile etc. =====*/
-    
-    @media only screen and (max-width: 767.9px) {
-        .container {
-            margin: 0 auto;
-            padding: .8rem;
-        }
-        .logo {
-            display: flex;
-            font-size: 1.5rem;
-            line-height: 2.2rem;
-        }
-        .card-home__image {
-            padding: 0;
-            flex: 1;
-            img {
-                width: 100%;
-            }
-        }
-        .card-home__subtitle,
-        .card-purpose__description,
-        .card-purpose__question {
-            margin-left: 2.5rem;
-        }
-        .card-home__title,
-        .card-purpose__title,
-        .card-services__title,
-        .card-services__title,
-        .card-OurWorks__title {
-            font-size: 1.5rem;
-            line-height: 2.25rem;
-            margin-left: 2.5rem;
-        }
-        .card-purpose__title {
-            max-width: 227px;
-        }
-        .card-OurWorks__title {
-            max-width: 300px;
-        }
-        .card-purpose__email-join1 {
-            width: 300px;
-            margin-bottom: 7rem;
-            margin-left: 2rem;
-        }
-        .card-purpose__email-join1--input {
-            border: none;
-            width: 300px;
-            font-size: 1rem;
-            line-height: 1;
-            padding-left: .8rem;
-        }
-        .card-services-boxes {
-            display: flex;
-            flex-direction: column;
-            max-width: 760px;
-            margin-left: 0;
-        }
-        .card-services-boxes>div {
-            margin-bottom: 2rem;
-            max-width: 500x;
-        }
-        .card-services {
-            margin-bottom: 8rem;
-            max-width: 500px;
-        }
-        .card-OurWorks__wrap {
-            display: flex;
-            flex-direction: column;
-        }
-        .see-more {
-            margin-top: 1.5rem;
-            justify-content: flex-start;
-            margin-left: 0;
-        }
-        .team-wrap {
-            display: flex;
-            flex-direction: column;
-        }
-        .team-photos {
-            column-gap: .5rem;
-        }
-        .team__pre-title {
-            margin-top: -5rem;
-        }
-        .team-photos__person3,
-        .team-photos__person1,
-        .team-photos__person2 {
-            width: 100%;
-        }
-        .team-photos__person1 {
-            margin-bottom: .5rem;
-        }
-        .client__line {
-            font-size: 1.5rem;
-            line-height: 2.25rem;
-            max-width: 600px;
-            margin-top: 6rem;
-            margin-bottom: 2.25rem;
-        }
-        .client__persona-img {
-            width: 18%;
-            margin-bottom: 6rem;
-        }
+    .contact-request__email-join {
+        margin-left: 7rem;
     }
-    /*=====tablet and screen sizes smaller than laptop =====*/
-    
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1023.9px) {
-        .container {
-            margin: 2rem auto;
-            max-width: 1000px;
-            padding: .5rem;
-        }
-        .toggle-nav {
-            margin-left: 9rem;
-            font-size: 1rem;
-        }
-        .team__title {
-            font-size: 2rem;
-            line-height: 3rem;
-        }
-        .team-photos {
-            column-gap: .5rem;
-        }
-        .team-photos__person3 {
-            margin-left: .5rem;
-        }
-        .footer-nav {
-            margin-left: 0rem;
-        }
-        .Edie {
-            margin-left: -5rem;
-        }
-        .contact-request__question {
-            margin-left: 1.2rem;
-        }
-        .contact-request__email-join {
-            width: 350px;
-            margin-left: 1rem;
-        }
-        .contact-request__email-join--input,
-        .card-purpose__email-join1--input {
-            font-size: .9rem;
-        }
+    .container {
+        margin: 2rem auto;
+        max-width: 1200px;
+        padding: 1rem;
     }
-    /*=====laptop and screen sizes smaller than laptop L ====*/
-    
-    @media only screen and (min-device-width: 1024px) and (max-device-width: 1439.9px) {
-        .container {
-            margin: 2rem auto;
-            max-width: 1200px;
-            padding: 1rem;
-        }
-        .toggle-nav {
-            margin-left: 12rem;
-        }
-        .contact-request__question {
-            margin-left: 7.1rem;
-        }
-        .contact-request__email-join {
-            margin-left: 7rem;
-        }
-        .container {
-            margin: 2rem auto;
-            max-width: 1200px;
-            padding: 1rem;
-        }
-        .toggle-nav {
-            margin-left: 12rem;
-        }
-        .contact-request__question {
-            margin-left: 7.1rem;
-        }
-        .contact-request__email-join {
-            margin-left: 7rem;
-        }
+    .toggle-nav {
+        margin-left: 12rem;
     }
+    .contact-request__question {
+        margin-left: 7.1rem;
+    }
+    .contact-request__email-join {
+        margin-left: 7rem;
+    }
+}
