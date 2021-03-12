@@ -1039,8 +1039,8 @@ i.card-BackEnd__customBackEnd {
 /*=====smaller than tablet / mobile etc. =====*/
 @media only screen and (max-width: 767.9px) {
   .container {
-    margin: 1 auto;
-    padding: .4rem;
+    margin: 0 auto;
+    padding: .8rem;
   }
   .logo {
     display: -webkit-box;
@@ -1098,14 +1098,18 @@ i.card-BackEnd__customBackEnd {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 760px;
+    margin-left: 0;
   }
   .card-services-boxes > div {
     margin-bottom: 2rem;
     max-width: 760px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .card-services {
     margin-bottom: 8rem;
@@ -1124,6 +1128,48 @@ i.card-BackEnd__customBackEnd {
     margin-bottom: 2rem;
     margin-left: 1rem;
     margin: auto;
+  }
+  .see-more {
+    margin-top: 1.5rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 0;
+  }
+  .team-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .team-photos {
+    -webkit-column-gap: .5rem;
+            column-gap: .5rem;
+  }
+  .team__pre-title {
+    margin-top: -5rem;
+  }
+  .team-photos__person3,
+  .team-photos__person1,
+  .team-photos__person2 {
+    width: 100%;
+  }
+  .team-photos__person1 {
+    margin-bottom: .5rem;
+  }
+  .client__line {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    max-width: 600px;
+    margin-top: 6rem;
+    margin-bottom: 2.25rem;
+  }
+  .client__persona-img {
+    width: 18%;
+    margin-bottom: 6rem;
   }
 }
 
@@ -1172,7 +1218,7 @@ i.card-BackEnd__customBackEnd {
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1439.9px) {
   .container {
     margin: 2rem auto;
-    max-width: 1000px;
+    max-width: 1200px;
     padding: 1rem;
   }
   .toggle-nav {
