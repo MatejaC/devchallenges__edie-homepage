@@ -280,6 +280,7 @@ ul {
 }
 
 ul li {
+  margin: 0 10px;
   color: #333333;
   font-family: "Poppins", sans-serif;
 }
