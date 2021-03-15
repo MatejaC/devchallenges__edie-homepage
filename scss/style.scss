@@ -228,7 +228,7 @@ header {
 }
 
 .btn-toggle {
-    margin-left: 2rem;
+    margin: .2rem 0 0 2rem;
     font-size: 24px;
 }
 
@@ -1015,7 +1015,7 @@ i.card-BackEnd__customBackEnd {
         margin: 0;
         padding: 0;
     }
-    ul.footer-nav {
+    .footer-nav ul {
         grid-column: 1;
         grid-row: 1;
         position: static;
