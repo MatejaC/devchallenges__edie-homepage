@@ -10,30 +10,6 @@
 
 /*colors*/
 /*fonts*/
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 18px;
-  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  -webkit-font-feature-settings: 'liga';
-          font-feature-settings: 'liga';
-}
-
 html,
 body,
 div,
@@ -669,7 +645,7 @@ i.card-BackEnd__customBackEnd {
 
 .see-more__arrow {
   margin-left: 0.3rem;
-  margin-top: .2rem;
+  margin-top: .15rem;
   background-color: transparent;
   outline: none;
   border: none;
@@ -677,6 +653,7 @@ i.card-BackEnd__customBackEnd {
 }
 
 .see-more__arrow:hover {
+  color: #2D9CDB;
   border: 1px solid #2D9CDB;
   transform: translateX(10px);
   -webkit-transform: translateX(10px);
@@ -1098,12 +1075,25 @@ i.card-BackEnd__customBackEnd {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .smarthome {
+    margin-top: 3rem;
+  }
+  .onboard,
+  .booking,
+  .Juice-product {
+    margin-top: 1.5rem;
+  }
   .see-more {
     margin-top: 1.5rem;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin-left: 0;
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  .see-more__arrow {
+    margin-top: -.15rem;
   }
   .team-wrap {
     display: -webkit-box;
@@ -1149,7 +1139,7 @@ i.card-BackEnd__customBackEnd {
     margin: 0;
     padding: 0;
   }
-  .footer-nav ul {
+  ul.footer-nav {
     -ms-grid-column: 1;
     grid-column: 1;
     -ms-grid-row: 1;
@@ -1188,17 +1178,18 @@ i.card-BackEnd__customBackEnd {
   .contact-request__email-join {
     max-width: 290px;
     height: 47px;
-    font-size: 10px;
+    font-size: .9rem;
     line-height: 15px;
-    margin-left: .18rem;
+    margin-left: .2rem;
   }
   .contact-request__email-join--input {
     font-size: .9rem;
     line-height: 1rem;
-    padding-left: .5rem;
+    padding-left: .4rem;
   }
   .contact-request__email-join--submit {
-    width: 71px;
+    font-size: .9rem;
+    width: 70px;
     height: 39px;
     margin-left: -4.7rem;
     margin-top: 9px;

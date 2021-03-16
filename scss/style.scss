@@ -32,29 +32,6 @@ $Heebo: 'Heebo',
 sans-serif;
 $Montserrat: 'Montserrat',
 sans-serif;
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 18px;
-    /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-}
-
 html,
 body,
 div,
@@ -612,13 +589,14 @@ i.card-BackEnd__customBackEnd {
 
 .see-more__arrow {
     margin-left: 0.3rem;
-    margin-top: .2rem;
+    margin-top: .15rem;
     background-color: transparent;
     outline: none;
     border: none;
     color: $blue;
     &:hover {
-        border: 1px solid$blue;
+        color: $blue;
+        border: 1px solid $blue;
         transform: translateX(10px);
         -webkit-transform: translateX(10px);
         -moz-transform: translateX(10px);
@@ -975,10 +953,23 @@ i.card-BackEnd__customBackEnd {
         display: flex;
         flex-direction: column;
     }
+    .smarthome {
+        margin-top: 3rem;
+    }
+    .onboard,
+    .booking,
+    .Juice-product {
+        margin-top: 1.5rem;
+    }
     .see-more {
         margin-top: 1.5rem;
         justify-content: flex-start;
         margin-left: 0;
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    .see-more__arrow {
+        margin-top: -.15rem;
     }
     .team-wrap {
         display: flex;
@@ -1015,7 +1006,7 @@ i.card-BackEnd__customBackEnd {
         margin: 0;
         padding: 0;
     }
-    .footer-nav ul {
+    ul.footer-nav {
         grid-column: 1;
         grid-row: 1;
         position: static;
@@ -1048,17 +1039,18 @@ i.card-BackEnd__customBackEnd {
     .contact-request__email-join {
         max-width: 290px;
         height: 47px;
-        font-size: 10px;
+        font-size: .9rem;
         line-height: 15px;
-        margin-left: .18rem;
+        margin-left: .2rem;
     }
     .contact-request__email-join--input {
         font-size: .9rem;
         line-height: 1rem;
-        padding-left: .5rem;
+        padding-left: .4rem;
     }
     .contact-request__email-join--submit {
-        width: 71px;
+        font-size: .9rem;
+        width: 70px;
         height: 39px;
         margin-left: -4.7rem;
         margin-top: 9px;
