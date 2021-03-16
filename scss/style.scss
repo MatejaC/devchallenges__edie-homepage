@@ -140,14 +140,33 @@ html {
 .container {
     margin: 2rem auto;
     max-width: 1300px;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
-header {
+
+/*navigation*/
+
+.navigation-menu {
     display: flex;
     align-items: center;
-    background-color: $background-color;
-    margin-bottom: 6rem;
+}
+
+.navigation-menu__content {
+    flex-grow: 1;
+}
+
+.toggle-nav {
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-family: $Poppins;
+    font-weight: 500;
+    line-height: 2.25rem;
+    letter-spacing: 0em;
+    font-size: 1rem;
+    @media (max-width: 767.9px) {
+        margin-left: 0rem;
+        margin-top: 3rem;
+    }
 }
 
 .logo {
@@ -160,32 +179,8 @@ header {
     letter-spacing: 0em;
 }
 
-
-/*navigation*/
-
 .open {
     left: 0rem;
-}
-
-.navigation-menu {
-    display: flex;
-    flex-grow: 1;
-}
-
-.toggle-nav {
-    justify-content: space-between;
-    flex-grow: 1;
-    font-size: 1.5rem;
-    font-family: $Poppins;
-    font-weight: 500;
-    line-height: 2.25rem;
-    letter-spacing: 0em;
-    text-align: right;
-    margin-left: 30rem;
-    @media (max-width: 767.9px) {
-        margin-left: 0rem;
-        margin-top: 3rem;
-    }
 }
 
 .toggle {
@@ -257,6 +252,7 @@ ul li {
     color: $blue;
     margin-bottom: 1rem;
     margin-left: 13rem;
+    margin-top: 6.5rem;
 }
 
 .card-home__title {
@@ -275,6 +271,7 @@ ul li {
     flex: 1;
     img {
         width: 100%;
+        object-fit: contain;
     }
 }
 
@@ -544,6 +541,7 @@ i.card-BackEnd__customBackEnd {
 .Juice-product__img {
     width: 100%;
     border-radius: 12px;
+    object-fit: contain;
 }
 
 .smarthome__decription-1,
@@ -574,6 +572,7 @@ i.card-BackEnd__customBackEnd {
 .booking__img img,
 .Juice-product__img img {
     width: 100%;
+    object-fit: contain;
 }
 
 .see-more {
@@ -671,6 +670,7 @@ i.card-BackEnd__customBackEnd {
 
 .team-photos img {
     border-radius: 24px;
+    object-fit: contain;
     -webkit-border-radius: 24px;
     -moz-border-radius: 24px;
     -ms-border-radius: 24px;
@@ -706,6 +706,7 @@ i.card-BackEnd__customBackEnd {
 
 .client__persona-img img {
     width: 100%;
+    object-fit: contain;
 }
 
 .client__persona-name {
@@ -894,6 +895,7 @@ i.card-BackEnd__customBackEnd {
         flex: 1;
         img {
             width: 100%;
+            object-fit: contain;
         }
     }
     .card-home__subtitle,
@@ -998,6 +1000,7 @@ i.card-BackEnd__customBackEnd {
     .client__persona-img {
         width: 18%;
         margin-bottom: 6rem;
+        object-fit: contain;
     }
     .footer-container {
         display: grid;
@@ -1076,7 +1079,6 @@ i.card-BackEnd__customBackEnd {
         padding: .5rem;
     }
     .toggle-nav {
-        margin-left: 9rem;
         font-size: 1rem;
     }
     .team__title {
@@ -1118,21 +1120,18 @@ i.card-BackEnd__customBackEnd {
         padding: 1rem;
     }
     .toggle-nav {
-        margin-left: 12rem;
+        font-size: 1.2rem;
     }
     .contact-request__question {
-        margin-left: 7.1rem;
+        margin-left: 5.1rem;
     }
     .contact-request__email-join {
-        margin-left: 7rem;
+        margin-left: 5rem;
     }
     .container {
         margin: 2rem auto;
         max-width: 1200px;
         padding: 1rem;
-    }
-    .toggle-nav {
-        margin-left: 12rem;
     }
     .contact-request__question {
         margin-left: 7.1rem;

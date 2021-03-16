@@ -120,18 +120,42 @@ html {
 .container {
   margin: 2rem auto;
   max-width: 1300px;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
-header {
+/*navigation*/
+.navigation-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #FFFFFF;
-  margin-bottom: 6rem;
+}
+
+.navigation-menu__content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.toggle-nav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 2.25rem;
+  letter-spacing: 0em;
+  font-size: 1rem;
+}
+
+@media (max-width: 767.9px) {
+  .toggle-nav {
+    margin-left: 0rem;
+    margin-top: 3rem;
+  }
 }
 
 .logo {
@@ -148,41 +172,8 @@ header {
   letter-spacing: 0em;
 }
 
-/*navigation*/
 .open {
   left: 0rem;
-}
-
-.navigation-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.toggle-nav {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  font-size: 1.5rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  line-height: 2.25rem;
-  letter-spacing: 0em;
-  text-align: right;
-  margin-left: 30rem;
-}
-
-@media (max-width: 767.9px) {
-  .toggle-nav {
-    margin-left: 0rem;
-    margin-top: 3rem;
-  }
 }
 
 .toggle {
@@ -281,6 +272,7 @@ ul li a {
   color: #2D9CDB;
   margin-bottom: 1rem;
   margin-left: 13rem;
+  margin-top: 6.5rem;
 }
 
 .card-home__title {
@@ -303,6 +295,8 @@ ul li a {
 
 .card-home__image img {
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .card-purpose__title {
@@ -596,6 +590,8 @@ i.card-BackEnd__customBackEnd {
 .Juice-product__img {
   width: 100%;
   border-radius: 12px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .smarthome__decription-1,
@@ -626,6 +622,8 @@ i.card-BackEnd__customBackEnd {
 .booking__img img,
 .Juice-product__img img {
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .see-more {
@@ -749,6 +747,8 @@ i.card-BackEnd__customBackEnd {
 
 .team-photos img {
   border-radius: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
   -webkit-border-radius: 24px;
   -moz-border-radius: 24px;
   -ms-border-radius: 24px;
@@ -789,6 +789,8 @@ i.card-BackEnd__customBackEnd {
 
 .client__persona-img img {
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .client__persona-name {
@@ -1007,6 +1009,8 @@ i.card-BackEnd__customBackEnd {
   }
   .card-home__image img {
     width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .card-home__subtitle,
   .card-purpose__description,
@@ -1128,6 +1132,8 @@ i.card-BackEnd__customBackEnd {
   .client__persona-img {
     width: 18%;
     margin-bottom: 6rem;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .footer-container {
     display: -ms-grid;
@@ -1217,7 +1223,6 @@ i.card-BackEnd__customBackEnd {
     padding: .5rem;
   }
   .toggle-nav {
-    margin-left: 9rem;
     font-size: 1rem;
   }
   .team__title {
@@ -1258,21 +1263,18 @@ i.card-BackEnd__customBackEnd {
     padding: 1rem;
   }
   .toggle-nav {
-    margin-left: 12rem;
+    font-size: 1.2rem;
   }
   .contact-request__question {
-    margin-left: 7.1rem;
+    margin-left: 5.1rem;
   }
   .contact-request__email-join {
-    margin-left: 7rem;
+    margin-left: 5rem;
   }
   .container {
     margin: 2rem auto;
     max-width: 1200px;
     padding: 1rem;
-  }
-  .toggle-nav {
-    margin-left: 12rem;
   }
   .contact-request__question {
     margin-left: 7.1rem;
