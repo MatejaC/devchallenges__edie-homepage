@@ -476,10 +476,20 @@ ul li a {
   color: #828282;
 }
 
-.card-UX__button:hover,
+.card-UX__button:hover, .card-UX__button:focus,
 .card-BackEnd__button:hover,
-.card-FrontEnd__button:hover {
+.card-BackEnd__button:focus,
+.card-FrontEnd__button:hover,
+.card-FrontEnd__button:focus {
   background-color: #BDBDBD;
+  outline: none;
+}
+
+.card-UX__button:active,
+.card-BackEnd__button:active,
+.card-FrontEnd__button:active {
+  background-color: #2D9CDB;
+  outline: none;
 }
 
 .card-UX:hover,

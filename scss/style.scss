@@ -429,9 +429,15 @@ ul li {
         line-height: 1.5rem;
         cursor: pointer;
         color: $gray3;
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $gray4;
+            outline: none;
         }
+        &:active {
+            background-color: $blue;
+            outline: none;
+    }
     }
     &:hover {
         background: $background-color;
